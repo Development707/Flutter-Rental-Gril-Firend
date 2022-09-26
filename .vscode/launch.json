@@ -1,0 +1,68 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug development",
+            "request": "launch",
+            "type": "dart",
+            "program": "app/lib/main_development.dart",
+            "args": [
+                "--target", "lib/main_development.dart",
+                "--flavor", "development",
+                "--dart-define",  "BASE_URL=https://api.dev.domain.com"
+            ],
+            "flutterMode": "debug"
+        },
+        {
+            "name": "Debug staging",
+            "request": "launch",
+            "type": "dart",
+            "program": "app/lib/main_staging.dart",
+            "args": [
+                "--target", "app/lib/main_staging.dart",
+                "--flavor", "staging",
+                "--dart-define",  "BASE_URL=https://api.stg.domain.com"
+            ],
+            "flutterMode": "debug"
+        },
+        {
+            "name": "Debug production",
+            "request": "launch",
+            "type": "dart",
+            "program": "app/lib/main_production.dart",
+            "args": [
+                "--target", "app/lib/main_production.dart",
+                "--flavor", "production",
+                "--dart-define", "BASE_URL=https://api.prod.domain.com"
+            ],
+            "flutterMode": "debug"
+        },
+        {
+            "name": "Release staging",
+            "request": "launch",
+            "type": "dart",
+            "program": "app/lib/main_staging.dart",
+            "args": [
+                "--target", "app/lib/main_staging.dart",
+                "--flavor", "staging",
+                "--dart-define", "BASE_URL=https://https://api.stg.domain.com"
+            ],
+            "flutterMode": "release"
+        },
+        {
+            "name": "Release production",
+            "request": "launch",
+            "type": "dart",
+            "program": "app/lib/main_production.dart",
+            "args": [
+                "--target", "app/lib/main_production.dart",
+                "--flavor", "production",
+                "--dart-define", "BASE_URL=https://api.prod.domain.com"
+            ],
+            "flutterMode": "release"
+        }
+    ]
+}

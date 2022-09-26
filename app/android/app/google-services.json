@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "786901601261",
+    "project_id": "rental-girl-friend",
+    "storage_bucket": "rental-girl-friend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786901601261:android:b6db5f480746c6c954b5e4",
+        "android_client_info": {
+          "package_name": "com.dyno.girl_friend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786901601261-ip11li6ijl0qau9rg1drnsmhdh3dokrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEBtdOzQs6M-w52jwb_OygBtaqBBBZnLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786901601261-ip11li6ijl0qau9rg1drnsmhdh3dokrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786901601261:android:da4672ba918a330f54b5e4",
+        "android_client_info": {
+          "package_name": "com.dyno.girl_friend.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786901601261-ip11li6ijl0qau9rg1drnsmhdh3dokrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEBtdOzQs6M-w52jwb_OygBtaqBBBZnLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786901601261-ip11li6ijl0qau9rg1drnsmhdh3dokrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786901601261:android:4e2b467af2895bae54b5e4",
+        "android_client_info": {
+          "package_name": "com.dyno.girl_friend.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786901601261-ip11li6ijl0qau9rg1drnsmhdh3dokrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEBtdOzQs6M-w52jwb_OygBtaqBBBZnLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786901601261-ip11li6ijl0qau9rg1drnsmhdh3dokrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
