@@ -14,7 +14,7 @@ class CustomBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!context.goRouter.canPop()) {
+    if (!context.goRouter.canPop() && onPressed == null) {
       return const SizedBox();
     }
 

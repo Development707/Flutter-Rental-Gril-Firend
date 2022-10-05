@@ -20,12 +20,7 @@ extension DefaultDialog on BuildContext {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radius ?? sizes.p12),
           ),
-          contentPadding: context.insets.fromLTRB(
-            context.sizes.p16,
-            context.sizes.p24,
-            context.sizes.p16,
-            context.sizes.p12,
-          ),
+          contentPadding: context.insets.h16,
           content: SizedBox(
             width: dialogWidth ?? context.width * .85,
             child: Column(

@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../config/dependency_container.dart';
 import '../features/authentication/authentication.dart';
-import '../localization/l10n.dart';
+import '../localization/generated/l10n.dart';
 import '../router/routing.dart';
 import '../shared/common/common.dart';
 import '../shared/theme/theme.dart';
@@ -14,8 +14,6 @@ import 'service/app_settings/app_settings_cubit.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +42,7 @@ class _AppViewState extends State<AppView> {
   void initState() {
     context.read<AuthenticationBloc>().add(const AuthenticationEvent.init());
 
-    appRouter = Routing.route();
+    appRouter = Routing.router;
     super.initState();
   }
 
@@ -53,7 +51,6 @@ class _AppViewState extends State<AppView> {
     return BlocBuilder<AppSettingsCubit, AppSettingsState>(
       builder: (BuildContext context, AppSettingsState state) {
         return MaterialApp.router(
-          key: MyApp.navigatorKey,
           builder: (BuildContext context, Widget? child) {
             return BlocListener<AppConnectCubit, AppConnectState>(
               listener: (BuildContext context2, AppConnectState state) {

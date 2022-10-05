@@ -46,15 +46,19 @@ extension ConfirmDialog on BuildContext {
                       Expanded(
                         child: AppTextButton(
                             primary: colorScheme.onSecondaryContainer,
-                            child: negative ?? Text(l1On.cancel),
-                            onPressed: () => Navigator.of(context).pop(false)),
+                            child: negative ?? Text(l10n.cancel),
+                            onPressed: () =>
+                                Navigator.of(context, rootNavigator: true)
+                                    .pop(false)),
                       ),
                       gaps.gapW16,
                       Expanded(
                         child: AppElevatedButton(
                             primary: colorScheme.primary,
-                            child: positive ?? Text(l1On.confirm),
-                            onPressed: () => Navigator.of(context).pop(true)),
+                            child: positive ?? Text(l10n.confirm),
+                            onPressed: () =>
+                                Navigator.of(context, rootNavigator: true)
+                                    .pop(true)),
                       ),
                     ],
                   )
@@ -64,7 +68,8 @@ extension ConfirmDialog on BuildContext {
                   top: -sizes.p16,
                   right: -sizes.p16,
                   child: GestureDetector(
-                      onTap: () => Navigator.of(context).pop(false),
+                      onTap: () =>
+                          Navigator.of(context, rootNavigator: true).pop(false),
                       child: AppIcon(AppIcons.icClose, size: sizes.p24)))
             ],
           ),

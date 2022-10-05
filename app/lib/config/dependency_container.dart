@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_redundant_argument_values
+
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
@@ -13,24 +15,25 @@ Future<void> resolveDependencies({
   getIt
 
     /// API Service
-    ..registerSingleton<Dio>(Dio(BaseOptions(
-      // ignore: avoid_redundant_argument_values
+    ..registerSingleton(AuthenticationService())
+    ..registerSingleton(Dio(BaseOptions(
       baseUrl: const String.fromEnvironment('BASE_URL'),
       contentType: 'application/json',
+      headers: <String, dynamic>{'accept': 'application/json, text/plain, */*'},
     )))
-    ..registerSingleton<AuthenticationService>(AuthenticationService())
-    ..registerSingleton<DioService>(DioService(
-      dioClient: getIt<Dio>(),
+    ..registerSingleton(DioService(
+      dioClient: getIt(),
       interceptors: <Interceptor>[
         TokenInterceptor(getIt<AuthenticationService>()),
         if (kDebugMode) LoggingInterceptor(),
         RefreshTokenInterceptor(getIt<AuthenticationService>()),
       ],
     ))
-    ..registerSingleton<ApiService>(ApiService(getIt<DioService>()))
+    ..registerSingleton(ApiService(getIt()))
 
     /// Authentication
-    ..registerSingleton<AuthenticationRepository>(
-        AuthenticationRepository(apiService: getIt<ApiService>()))
-    ..registerSingleton<AuthenticationBloc>(AuthenticationBloc(getIt()));
+    ..registerSingleton(AuthenticationRepository(getIt()))
+    ..registerSingleton(AuthenticationBloc(getIt()));
+
+  await getIt.allReady();
 }

@@ -45,8 +45,6 @@ class TokenInterceptor extends Interceptor {
 
       options.headers.remove('requiresAuthToken');
     }
-    options.headers.addAll(
-        <String, dynamic>{'accept': 'application/json, text/plain, */*'});
     return handler.next(options);
   }
 }

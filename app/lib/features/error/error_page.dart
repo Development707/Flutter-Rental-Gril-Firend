@@ -17,7 +17,7 @@ class ErrorPage extends StatelessWidget {
       desktop: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          const Expanded(flex: 2, child: EmptyWidget()),
+          Expanded(flex: 2, child: EmptyWidget(title: error.toString())),
           context.gaps.gapW16,
           Expanded(
             child: Column(
@@ -30,7 +30,7 @@ class ErrorPage extends StatelessWidget {
       mobile: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Expanded(child: EmptyWidget(content: '$error')),
+          Expanded(child: EmptyWidget(content: error.toString())),
           ..._actionButton(context),
         ],
       ),
@@ -42,13 +42,13 @@ class ErrorPage extends StatelessWidget {
 
   List<Widget> _actionButton(BuildContext context) => <Widget>[
         AppOutlinedButton(
-          child: Text(context.l1On.back),
+          child: Text(context.l10n.back),
           onPressed: () =>
               context.canPop() ? context.pop() : context.go(Routes.home),
         ),
         context.gaps.gapH16,
         AppElevatedButton(
-          child: Text(context.l1On.back_to_home),
+          child: Text(context.l10n.back_to_home),
           onPressed: () => context.go(Routes.home),
         )
       ];

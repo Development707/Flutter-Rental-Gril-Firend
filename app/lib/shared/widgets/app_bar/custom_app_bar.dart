@@ -22,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: const CustomBackButton(),
+      leading: CustomBackButton(onPressed: onBackClicked),
       centerTitle: true,
       title: title ??
           Text(titleText ?? '', style: context.typo.titleLarge.weight600),

@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-import 'color_data.dart';
+import 'color_palette_data.dart';
 import 'size_data.dart';
 import 'typography_data.dart';
 
 class ThemeDataContainer {
   const ThemeDataContainer({
-    this.colors = const ColorData(),
+    this.colors = const ColorPaletteData(),
     this.sizes = const SizeData(),
-    this.typographyData = const TypographyData(),
+    this.typographys = const TypographyData(),
   });
 
-  final ColorData colors;
+  final ColorPaletteData colors;
   final SizeData sizes;
-  final TypographyData typographyData;
+  final TypographyData typographys;
 
   ThemeData lightTheme() {
-    final ColorScheme colorScheme = ColorData.getLightColorScheme(colors);
-    final TextTheme textTheme = TypographyData.getTextTheme(typographyData);
+    final ColorScheme colorScheme = ColorPaletteData.lightColorScheme(colors);
+    final TextTheme textTheme = TypographyData.textTheme(typographys);
 
     return ThemeData.from(
       useMaterial3: true,
@@ -27,8 +27,8 @@ class ThemeDataContainer {
   }
 
   ThemeData darkTheme() {
-    final ColorScheme colorScheme = ColorData.getDarkColorScheme(colors);
-    final TextTheme textTheme = TypographyData.getTextTheme(typographyData);
+    final ColorScheme colorScheme = ColorPaletteData.darkColorScheme(colors);
+    final TextTheme textTheme = TypographyData.textTheme(typographys);
 
     return ThemeData.from(
       useMaterial3: true,

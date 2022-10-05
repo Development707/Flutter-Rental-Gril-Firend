@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../localization/l10n.dart';
+import '../../../localization/generated/l10n.dart';
 import '../../theme/theme.dart';
 
 extension CustomizeContextExt on BuildContext {
@@ -58,7 +58,7 @@ extension CustomizeContextExt on BuildContext {
         widthTransformer(dividedBy: dividedBy, reducedBy: reducedByW);
   }
 
-  AppLanguage get l1On => AppLanguage.of(this);
+  AppLanguage get l10n => AppLanguage.of(this);
 
   GoRouter get goRouter => GoRouter.of(this);
 
@@ -70,9 +70,9 @@ extension CustomizeContextExt on BuildContext {
 
   ThemeGapSizeData get gaps => sizes.gaps;
 
-  ColorData get colors => themeProvider.colors;
+  ColorPaletteData get colors => themeProvider.colors;
 
-  TypographyData get typo => themeProvider.typographyData;
+  TypographyData get typo => themeProvider.typographys;
 
   ThemeData get theme => Theme.of(this);
 

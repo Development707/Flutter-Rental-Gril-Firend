@@ -23,17 +23,17 @@ class LoginForm extends StatelessWidget {
         ),
         AppOutlinedInput(
             prefixIcon: const AppIcon(AppIcons.icSms),
-            hintText: context.l1On.account),
+            hintText: context.l10n.account),
         AppOutlinedInput(
           prefixIcon: const AppIcon(AppIcons.icLock),
-          hintText: context.l1On.password,
+          hintText: context.l10n.password,
           suffixIcon: const AppIcon(AppIcons.icEye),
         ),
         AppElevatedButton(
             onPressed: () {
               context.read<LoginCubit>().login();
             },
-            child: Text(context.l1On.log_in)),
+            child: Text(context.l10n.log_in)),
       ].applySeparator(separator: context.gaps.gapH16),
     );
   }

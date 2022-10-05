@@ -3,8 +3,7 @@ import '../../../shared/services/service.dart';
 import 'authentication_endpoint.dart';
 
 class AuthenticationRepository {
-  AuthenticationRepository({required ApiService apiService})
-      : _apiService = apiService;
+  AuthenticationRepository(ApiService apiService) : _apiService = apiService;
 
   final ApiService _apiService;
 

@@ -5,17 +5,18 @@ class Routes {
   static const String auth = '/authentication';
   static const String otp = '/one-time-password';
 
-  /// Home router
+  /// Main router
   static const String home = '/home';
   static const String search = '/search';
   static const String notification = '/notification';
   static const String menu = '/menu';
 
   /// Other router
-  static const String helpCenter = '/help-center';
+  static const String boarding = '/boarding';
 
   // Allow all permissions
   static final List<String> pageNotAuthen = <String>[
     otp,
+    boarding,
   ];
 }

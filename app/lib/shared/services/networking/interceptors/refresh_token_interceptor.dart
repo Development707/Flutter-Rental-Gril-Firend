@@ -42,6 +42,7 @@ class RefreshTokenInterceptor extends QueuedInterceptor {
         //contentType already set in tokenDio headers
         tokenDio.options = BaseOptions(
           baseUrl: dioError.requestOptions.baseUrl,
+          contentType: dioError.requestOptions.contentType,
           headers: <String, dynamic>{
             'accept': 'application/json, text/plain, */*'
           },

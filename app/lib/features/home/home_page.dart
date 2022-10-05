@@ -5,8 +5,9 @@ import '../../constants/app_icons.dart';
 import '../../router/router.dart';
 import '../../shared/common/common.dart';
 import '../../shared/widgets/widgets.dart';
+import '../notification/notification.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({
     super.key,
     required this.location,
@@ -17,13 +18,25 @@ class HomePage extends StatelessWidget {
   final Widget child;
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    NotificationService.initialize();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(titleText: _routeToTitleText(context, location)),
+      appBar:
+          CustomAppBar(titleText: _routeToTitleText(context, widget.location)),
       body: Row(
         children: <Widget>[
           if (!context.isPhone) _navigationRail(context),
-          Expanded(child: child),
+          Expanded(child: widget.child),
         ],
       ),
       bottomNavigationBar:
@@ -34,7 +47,9 @@ class HomePage extends StatelessWidget {
   NavigationRail _navigationRail(BuildContext context) {
     return NavigationRail(
       extended: context.isDesktopOrWider,
-      selectedIndex: _routeToIndex(location),
+      minExtendedWidth: context.sizes.p4 * 45,
+      labelType: context.isDesktopOrWider ? null : NavigationRailLabelType.all,
+      selectedIndex: _routeToIndex(widget.location),
       onDestinationSelected: (int index) {
         context.goNamed(_indexToRoute(index));
       },
@@ -42,12 +57,12 @@ class HomePage extends StatelessWidget {
         NavigationRailDestination(
           icon: Icon(Icons.home_outlined, color: context.colorScheme.primary),
           selectedIcon: Icon(Icons.home, color: context.colorScheme.primary),
-          label: Text(context.l1On.home),
+          label: Text(context.l10n.home),
         ),
         NavigationRailDestination(
           icon: Icon(Icons.search_outlined, color: context.colorScheme.primary),
           selectedIcon: Icon(Icons.search, color: context.colorScheme.primary),
-          label: Text(context.l1On.search),
+          label: Text(context.l10n.search),
         ),
         NavigationRailDestination(
           icon: AppIcon(
@@ -58,18 +73,13 @@ class HomePage extends StatelessWidget {
             AppIcons.icNotifyBold,
             color: context.colorScheme.primary,
           ),
-          label: Text(context.l1On.notification),
+          label: Text(context.l10n.notification),
         ),
         NavigationRailDestination(
-          icon: AppIcon(
-            AppIcons.icProfile,
-            color: context.colorScheme.primary,
-          ),
-          selectedIcon: AppIcon(
-            AppIcons.icProfileBold,
-            color: context.colorScheme.primary,
-          ),
-          label: Text(context.l1On.profile),
+          icon: Icon(Icons.menu_outlined, color: context.colorScheme.primary),
+          selectedIcon:
+              Icon(Icons.menu_open, color: context.colorScheme.primary),
+          label: Text(context.l10n.menu),
         ),
       ],
     );
@@ -77,7 +87,7 @@ class HomePage extends StatelessWidget {
 
   NavigationBar _bottomNavigationBar(BuildContext context) {
     return NavigationBar(
-      selectedIndex: _routeToIndex(location),
+      selectedIndex: _routeToIndex(widget.location),
       onDestinationSelected: (int index) {
         context.goNamed(_indexToRoute(index));
       },
@@ -85,12 +95,12 @@ class HomePage extends StatelessWidget {
         NavigationDestination(
           icon: Icon(Icons.home_outlined, color: context.colorScheme.primary),
           selectedIcon: Icon(Icons.home, color: context.colorScheme.primary),
-          label: context.l1On.home,
+          label: context.l10n.home,
         ),
         NavigationDestination(
           icon: Icon(Icons.search_outlined, color: context.colorScheme.primary),
           selectedIcon: Icon(Icons.search, color: context.colorScheme.primary),
-          label: context.l1On.search,
+          label: context.l10n.search,
         ),
         NavigationDestination(
           icon: AppIcon(
@@ -101,7 +111,7 @@ class HomePage extends StatelessWidget {
             AppIcons.icNotifyBold,
             color: context.colorScheme.primary,
           ),
-          label: context.l1On.notification,
+          label: context.l10n.notification,
         ),
         NavigationDestination(
           icon: AppIcon(
@@ -112,24 +122,23 @@ class HomePage extends StatelessWidget {
             AppIcons.icProfileBold,
             color: context.colorScheme.primary,
           ),
-          label: context.l1On.profile,
+          label: context.l10n.menu,
         ),
       ],
     );
   }
 
-  String _routeToTitleText(BuildContext context, String route) {
-    switch (route) {
-      case Routes.home:
-        return context.l1On.home;
-      case Routes.search:
-        return context.l1On.search;
-      case Routes.notification:
-        return context.l1On.notification;
-      case Routes.menu:
-        return context.l1On.profile;
-      default:
-        return context.l1On.home;
+  static String? _routeToTitleText(BuildContext context, String route) {
+    if (route.contains(Routes.home)) {
+      return context.l10n.home;
+    } else if (route.contains(Routes.search)) {
+      return context.l10n.search;
+    } else if (route.contains(Routes.notification)) {
+      return context.l10n.notification;
+    } else if (route.contains(Routes.menu)) {
+      return context.l10n.menu;
+    } else {
+      return null;
     }
   }
 

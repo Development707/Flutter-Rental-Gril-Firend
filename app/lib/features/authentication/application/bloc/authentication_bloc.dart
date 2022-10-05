@@ -3,7 +3,6 @@ import 'dart:convert';
 
 import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../shared/common/common.dart';
@@ -36,7 +35,6 @@ class AuthenticationBloc
       if (tokenS != null && userS != null) {
         final User user = User.fromJson(jsonDecode(userS) as JSON);
         emit(AuthenticationState.authenticated(user));
-        FlutterNativeSplash.remove();
       } else {
         _onLoggedOut(null, emit);
       }
@@ -49,14 +47,12 @@ class AuthenticationBloc
       _LoggedIn event, Emitter<AuthenticationState> emit) async {
     await _authService.saveUser(jsonEncode(event.user.toJson()));
     emit(AuthenticationState.authenticated(event.user));
-    FlutterNativeSplash.remove();
   }
 
   FutureOr<void> _onLoggedOut(
       _LoggedOut? event, Emitter<AuthenticationState> emit) async {
     emit(const AuthenticationState.unauthenticated());
     _authService.resetKeys();
-    FlutterNativeSplash.remove();
   }
 
   FutureOr<void> _onSaveToken(

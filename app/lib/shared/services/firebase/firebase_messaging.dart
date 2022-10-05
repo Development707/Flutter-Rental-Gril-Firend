@@ -33,33 +33,38 @@ class CustomMessaging {
     if (kDebugMode) {
       dev.log(
           name: 'CustomFirebaseMessaging',
-          '\x1B[35mHandling a background message: ${message.messageId}');
+          '\x1B[35mHandling background message: ${message.messageId}');
     }
   }
 
   /// Prompts the user for notification permissions.
-  Future<void> requestPermission() async {
+  Future<NotificationSettings> requestPermission() async {
     final NotificationSettings settings = await _messaging!.requestPermission(
       announcement: true,
       carPlay: true,
       criticalAlert: true,
+      provisional: true,
+    );
+    await _messaging!.setForegroundNotificationPresentationOptions(
+      sound: true,
     );
 
     if (kDebugMode) {
       dev.log(
-          name: runtimeType.toString(),
+          name: '$runtimeType',
           '\x1B[35mUser granted permission: ${settings.authorizationStatus}');
     }
+
+    return settings;
   }
 
   /// Returns the default FCM token for this device.
   Future<String?> getToken() async {
-    final String? token = await _messaging!.getToken(vapidKey: 'BGpdLRs......');
+    final String? token = await _messaging!.getToken();
 
     if (kDebugMode) {
       dev.log(
-          name: runtimeType.toString(),
-          '\x1B[35m[CustomFirebaseMessaging] User get FCM token: $token');
+          name: runtimeType.toString(), '\x1B[35mUser get FCM token: $token');
     }
 
     return token;
@@ -68,9 +73,7 @@ class CustomMessaging {
   /// Removes access to an FCM token previously authorized.
   Future<void> deleteToken() {
     if (kDebugMode) {
-      dev.log(
-          name: runtimeType.toString(),
-          '\x1B[35m[CustomFirebaseMessaging] User delete FCM token');
+      dev.log(name: runtimeType.toString(), '\x1B[35mUser delete FCM token');
     }
     return _messaging!.deleteToken();
   }
@@ -78,13 +81,40 @@ class CustomMessaging {
   /// This should be used to determine whether specific notification interaction
   /// should open the app with a specific purpose (e.g. opening a chat message,
   /// specific screen etc).
-  Future<RemoteMessage?> getInitialMessage() => _messaging!.getInitialMessage();
+  Future<RemoteMessage?> getInitialMessage() async {
+    final RemoteMessage? message = await _messaging!.getInitialMessage();
+    if (kDebugMode) {
+      dev.log(
+          name: '$runtimeType',
+          '\x1B[35mHandling initial message: ${message?.data}');
+    }
+    return message;
+  }
 
   /// Returns a Stream that is called when an incoming FCM payload is received
   /// whilst the Flutter instance is in the foreground.
-  static Stream<RemoteMessage> get onMessage => FirebaseMessaging.onMessage;
+  static Stream<RemoteMessage> get onMessage {
+    final Stream<RemoteMessage> stream = FirebaseMessaging.onMessage;
+    stream.asBroadcastStream().listen((RemoteMessage message) {
+      if (kDebugMode) {
+        dev.log(
+            name: 'CustomFirebaseMessaging',
+            '\x1B[35mHandling foreground message: ${message.data}');
+      }
+    });
+    return stream;
+  }
 
   /// Returns a [Stream] that is called when a user presses a notification message displayed via FCM.
-  static Stream<RemoteMessage> get onMessageOpenedApp =>
-      FirebaseMessaging.onMessageOpenedApp;
+  static Stream<RemoteMessage> get onMessageOpenedApp {
+    final Stream<RemoteMessage> stream = FirebaseMessaging.onMessageOpenedApp;
+    stream.asBroadcastStream().listen((RemoteMessage message) {
+      if (kDebugMode) {
+        dev.log(
+            name: 'CustomFirebaseMessaging',
+            '\x1B[35mHandling message open app: ${message.data}');
+      }
+    });
+    return stream;
+  }
 }

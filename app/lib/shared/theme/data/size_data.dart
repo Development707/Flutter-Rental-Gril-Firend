@@ -11,12 +11,13 @@ class SizeData {
         p16 = mainSize * 4,
         p24 = mainSize * 5,
         p32 = mainSize * 6,
+        p40 = mainSize * 8,
         p48 = mainSize * 12,
+        p56 = mainSize * 14,
         p64 = mainSize * 16,
         p72 = mainSize * 18,
         p80 = mainSize * 20,
-        p96 = mainSize * 24,
-        p128 = mainSize * 32;
+        p96 = mainSize * 24;
 
   final double zero;
   final double p4;
@@ -25,12 +26,13 @@ class SizeData {
   final double p16;
   final double p24;
   final double p32;
+  final double p40;
   final double p48;
+  final double p56;
   final double p64;
   final double p72;
   final double p80;
   final double p96;
-  final double p128;
 
   /// Get corresponding insets
   ThemeEdgeInsetsSizeData get insets => ThemeEdgeInsetsSizeData(this);
@@ -54,12 +56,13 @@ class ThemeEdgeInsetsSizeData {
   EdgeInsets get a16 => EdgeInsets.all(_spacing.p16);
   EdgeInsets get a24 => EdgeInsets.all(_spacing.p24);
   EdgeInsets get a32 => EdgeInsets.all(_spacing.p32);
+  EdgeInsets get a40 => EdgeInsets.all(_spacing.p40);
   EdgeInsets get a48 => EdgeInsets.all(_spacing.p48);
+  EdgeInsets get a56 => EdgeInsets.all(_spacing.p56);
   EdgeInsets get a64 => EdgeInsets.all(_spacing.p64);
   EdgeInsets get a72 => EdgeInsets.all(_spacing.p72);
   EdgeInsets get a80 => EdgeInsets.all(_spacing.p80);
   EdgeInsets get a96 => EdgeInsets.all(_spacing.p96);
-  EdgeInsets get a128 => EdgeInsets.all(_spacing.p128);
 
   /// Horizontal insets
   EdgeInsets get h4 => EdgeInsets.symmetric(horizontal: _spacing.p4);
@@ -68,12 +71,13 @@ class ThemeEdgeInsetsSizeData {
   EdgeInsets get h16 => EdgeInsets.symmetric(horizontal: _spacing.p16);
   EdgeInsets get h24 => EdgeInsets.symmetric(horizontal: _spacing.p24);
   EdgeInsets get h32 => EdgeInsets.symmetric(horizontal: _spacing.p32);
+  EdgeInsets get h40 => EdgeInsets.symmetric(horizontal: _spacing.p40);
   EdgeInsets get h48 => EdgeInsets.symmetric(horizontal: _spacing.p48);
+  EdgeInsets get h56 => EdgeInsets.symmetric(horizontal: _spacing.p56);
   EdgeInsets get h64 => EdgeInsets.symmetric(horizontal: _spacing.p64);
   EdgeInsets get h72 => EdgeInsets.symmetric(horizontal: _spacing.p72);
   EdgeInsets get h80 => EdgeInsets.symmetric(horizontal: _spacing.p80);
   EdgeInsets get h96 => EdgeInsets.symmetric(horizontal: _spacing.p96);
-  EdgeInsets get h128 => EdgeInsets.symmetric(horizontal: _spacing.p128);
 
   /// Vertical insets
   EdgeInsets get v4 => EdgeInsets.symmetric(vertical: _spacing.p4);
@@ -82,33 +86,13 @@ class ThemeEdgeInsetsSizeData {
   EdgeInsets get v16 => EdgeInsets.symmetric(vertical: _spacing.p16);
   EdgeInsets get v24 => EdgeInsets.symmetric(vertical: _spacing.p24);
   EdgeInsets get v32 => EdgeInsets.symmetric(vertical: _spacing.p32);
+  EdgeInsets get v40 => EdgeInsets.symmetric(vertical: _spacing.p40);
   EdgeInsets get v48 => EdgeInsets.symmetric(vertical: _spacing.p48);
+  EdgeInsets get v56 => EdgeInsets.symmetric(vertical: _spacing.p56);
   EdgeInsets get v64 => EdgeInsets.symmetric(vertical: _spacing.p64);
   EdgeInsets get v72 => EdgeInsets.symmetric(vertical: _spacing.p72);
   EdgeInsets get v80 => EdgeInsets.symmetric(vertical: _spacing.p80);
   EdgeInsets get v96 => EdgeInsets.symmetric(vertical: _spacing.p96);
-  EdgeInsets get v128 => EdgeInsets.symmetric(vertical: _spacing.p128);
-
-  EdgeInsets only({
-    double left = 0.0,
-    double top = 0.0,
-    double right = 0.0,
-    double bottom = 0.0,
-  }) =>
-      EdgeInsets.only(
-        left: left,
-        top: top,
-        right: right,
-        bottom: bottom,
-      );
-
-  EdgeInsets fromLTRB([
-    double left = 0.0,
-    double top = 0.0,
-    double right = 0.0,
-    double bottom = 0.0,
-  ]) =>
-      EdgeInsets.fromLTRB(left, top, right, bottom);
 }
 
 /// {@macro gap}
@@ -125,12 +109,13 @@ class ThemeGapSizeData {
   SizedBox get gapW16 => SizedBox(width: _spacing.p16);
   SizedBox get gapW24 => SizedBox(width: _spacing.p24);
   SizedBox get gapW32 => SizedBox(width: _spacing.p32);
+  SizedBox get gapW40 => SizedBox(width: _spacing.p40);
   SizedBox get gapW48 => SizedBox(width: _spacing.p48);
   SizedBox get gapW64 => SizedBox(width: _spacing.p64);
+  SizedBox get gapW56 => SizedBox(width: _spacing.p56);
   SizedBox get gapW72 => SizedBox(width: _spacing.p72);
   SizedBox get gapW80 => SizedBox(width: _spacing.p80);
   SizedBox get gapW96 => SizedBox(width: _spacing.p96);
-  SizedBox get gapW128 => SizedBox(width: _spacing.p128);
 
   /// Constant gap heights
   SizedBox get gapH4 => SizedBox(height: _spacing.p4);
@@ -139,10 +124,11 @@ class ThemeGapSizeData {
   SizedBox get gapH16 => SizedBox(height: _spacing.p16);
   SizedBox get gapH24 => SizedBox(height: _spacing.p24);
   SizedBox get gapH32 => SizedBox(height: _spacing.p32);
+  SizedBox get gapH40 => SizedBox(height: _spacing.p40);
   SizedBox get gapH48 => SizedBox(height: _spacing.p48);
+  SizedBox get gapH56 => SizedBox(height: _spacing.p56);
   SizedBox get gapH64 => SizedBox(height: _spacing.p64);
   SizedBox get gapH72 => SizedBox(height: _spacing.p72);
   SizedBox get gapH80 => SizedBox(height: _spacing.p80);
   SizedBox get gapH96 => SizedBox(height: _spacing.p96);
-  SizedBox get gapH128 => SizedBox(height: _spacing.p128);
 }
