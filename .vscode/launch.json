@@ -22,7 +22,7 @@
             "type": "dart",
             "program": "app/lib/main_staging.dart",
             "args": [
-                "--target", "app/lib/main_staging.dart",
+                "--target", "lib/main_staging.dart",
                 "--flavor", "staging",
                 "--dart-define",  "BASE_URL=https://api.stg.domain.com"
             ],
@@ -34,7 +34,7 @@
             "type": "dart",
             "program": "app/lib/main_production.dart",
             "args": [
-                "--target", "app/lib/main_production.dart",
+                "--target", "lib/main_production.dart",
                 "--flavor", "production",
                 "--dart-define", "BASE_URL=https://api.prod.domain.com"
             ],
@@ -46,7 +46,7 @@
             "type": "dart",
             "program": "app/lib/main_staging.dart",
             "args": [
-                "--target", "app/lib/main_staging.dart",
+                "--target", "lib/main_staging.dart",
                 "--flavor", "staging",
                 "--dart-define", "BASE_URL=https://https://api.stg.domain.com"
             ],
@@ -58,7 +58,7 @@
             "type": "dart",
             "program": "app/lib/main_production.dart",
             "args": [
-                "--target", "app/lib/main_production.dart",
+                "--target", "lib/main_production.dart",
                 "--flavor", "production",
                 "--dart-define", "BASE_URL=https://api.prod.domain.com"
             ],

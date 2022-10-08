@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
         builder: (BuildContext context, LoginState state) {
           return Scaffold(
             body: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Flexible(child: Image.asset(AppImages.icProd)),
                   context.gaps.h24,
