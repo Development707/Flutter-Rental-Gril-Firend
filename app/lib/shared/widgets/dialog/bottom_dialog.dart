@@ -82,24 +82,24 @@ extension BottomModal on BuildContext {
             ),
           ),
         ),
-        gaps.gapH8,
+        gaps.h8,
         if (image != null) ...<Widget>[
           Center(child: image),
-          gaps.gapH24,
+          gaps.h24,
         ],
         DefaultTextStyle(
           style: typo.titleLarge.weight600,
           child: title!,
         ),
-        gaps.gapH16,
+        gaps.h16,
         Expanded(
           child: DefaultTextStyle(
             style: typo.bodyLarge,
             child: content!,
           ),
         ),
-        gaps.gapH24,
-        ...actions.applySeparator(separator: gaps.gapH8).toList(),
+        gaps.h24,
+        ...actions.applySeparator(separator: gaps.h8).toList(),
       ],
     );
 

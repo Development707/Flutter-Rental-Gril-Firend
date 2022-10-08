@@ -4,7 +4,6 @@ import '../../../constants/app_icons.dart';
 import '../../common/common.dart';
 import '../app_icon.dart';
 import '../button/elevated_button.dart';
-import '../button/text_button.dart';
 
 extension WarningDialog on BuildContext {
   Future<bool> showWarnigDialog<T>({
@@ -34,35 +33,49 @@ extension WarningDialog on BuildContext {
                     Center(child: image),
                   ],
                   DefaultTextStyle(
-                    style: typo.headlineSmall.weight500,
+                    style: typo.headlineSmall.weight500.copyWith(
+                      color: colorScheme.error,
+                    ),
                     child: title,
                   ),
                   DefaultTextStyle(
-                    style: typo.bodyMedium,
+                    style: typo.bodyMedium.copyWith(
+                      color: colorScheme.onSurface,
+                    ),
                     child: content,
                   ),
                   Row(
                     children: <Widget>[
                       Expanded(
-                        child: AppTextButton(
-                            primary: colorScheme.onSecondaryContainer,
-                            child: negative ?? Text(l10n.cancel),
-                            onPressed: () =>
-                                Navigator.of(context, rootNavigator: true)
-                                    .pop(false)),
+                        child: GestureDetector(
+                          onTap: () =>
+                              Navigator.of(context, rootNavigator: true)
+                                  .pop(false),
+                          child: Padding(
+                            padding: insets.h16.add(insets.v8),
+                            child: Center(child: negative ?? Text(l10n.cancel)),
+                          ),
+                        ),
                       ),
-                      gaps.gapW16,
+                      gaps.w16,
                       Expanded(
                         child: AppElevatedButton(
-                            primary: colorScheme.error,
-                            child: positive ?? Text(l10n.confirm),
+                            dense: false,
+                            primary: colorScheme.errorContainer,
+                            child: positive ??
+                                Text(
+                                  l10n.confirm,
+                                  style: typo.labelLarge.copyWith(
+                                    color: colorScheme.onErrorContainer,
+                                  ),
+                                ),
                             onPressed: () =>
                                 Navigator.of(context, rootNavigator: true)
                                     .pop(true)),
                       ),
                     ],
                   )
-                ].applySeparator(separator: gaps.gapH16),
+                ].applySeparator(separator: gaps.h16),
               ),
               Positioned(
                   top: -sizes.p16,
@@ -76,8 +89,6 @@ extension WarningDialog on BuildContext {
         );
       },
     );
-
-    await Future<void>.delayed(const Duration(milliseconds: 500));
 
     return result ?? false;
   }

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../constants/app_icons.dart';
 import '../../router/router.dart';
 import '../../shared/common/common.dart';
-import '../../shared/widgets/widgets.dart';
 import '../notification/notification.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,12 +29,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          CustomAppBar(titleText: _routeToTitleText(context, widget.location)),
       body: Row(
         children: <Widget>[
-          if (!context.isPhone) _navigationRail(context),
-          Expanded(child: widget.child),
+          if (!context.isPhone) SafeArea(child: _navigationRail(context)),
+          Expanded(
+            child: SafeArea(
+              top: false,
+              child: widget.child,
+            ),
+          ),
         ],
       ),
       bottomNavigationBar:
@@ -55,31 +56,31 @@ class _HomePageState extends State<HomePage> {
       },
       destinations: <NavigationRailDestination>[
         NavigationRailDestination(
-          icon: Icon(Icons.home_outlined, color: context.colorScheme.primary),
+          icon: Icon(Icons.home_outlined, color: context.colorScheme.outline),
           selectedIcon: Icon(Icons.home, color: context.colorScheme.primary),
           label: Text(context.l10n.home),
         ),
         NavigationRailDestination(
-          icon: Icon(Icons.search_outlined, color: context.colorScheme.primary),
-          selectedIcon: Icon(Icons.search, color: context.colorScheme.primary),
-          label: Text(context.l10n.search),
+          icon: Icon(Icons.search_outlined, color: context.colorScheme.outline),
+          selectedIcon: Icon(Icons.zoom_in, color: context.colorScheme.primary),
+          label: Text(context.l10n.explore),
         ),
         NavigationRailDestination(
-          icon: AppIcon(
-            AppIcons.icNotify,
-            color: context.colorScheme.primary,
-          ),
-          selectedIcon: AppIcon(
-            AppIcons.icNotifyBold,
-            color: context.colorScheme.primary,
-          ),
-          label: Text(context.l10n.notification),
-        ),
-        NavigationRailDestination(
-          icon: Icon(Icons.menu_outlined, color: context.colorScheme.primary),
+          icon:
+              Icon(Icons.favorite_outline, color: context.colorScheme.outline),
           selectedIcon:
-              Icon(Icons.menu_open, color: context.colorScheme.primary),
-          label: Text(context.l10n.menu),
+              Icon(Icons.favorite, color: context.colorScheme.primary),
+          label: Text(context.l10n.favorites),
+        ),
+        NavigationRailDestination(
+          icon: Icon(Icons.forum_outlined, color: context.colorScheme.outline),
+          selectedIcon: Icon(Icons.forum, color: context.colorScheme.primary),
+          label: Text(context.l10n.message),
+        ),
+        NavigationRailDestination(
+          icon: Icon(Icons.person_outline, color: context.colorScheme.outline),
+          selectedIcon: Icon(Icons.person, color: context.colorScheme.primary),
+          label: Text(context.l10n.profile),
         ),
       ],
     );
@@ -93,53 +94,34 @@ class _HomePageState extends State<HomePage> {
       },
       destinations: <NavigationDestination>[
         NavigationDestination(
-          icon: Icon(Icons.home_outlined, color: context.colorScheme.primary),
+          icon: Icon(Icons.home_outlined, color: context.colorScheme.outline),
           selectedIcon: Icon(Icons.home, color: context.colorScheme.primary),
           label: context.l10n.home,
         ),
         NavigationDestination(
-          icon: Icon(Icons.search_outlined, color: context.colorScheme.primary),
-          selectedIcon: Icon(Icons.search, color: context.colorScheme.primary),
-          label: context.l10n.search,
+          icon: Icon(Icons.search_outlined, color: context.colorScheme.outline),
+          selectedIcon: Icon(Icons.zoom_in, color: context.colorScheme.primary),
+          label: context.l10n.explore,
         ),
         NavigationDestination(
-          icon: AppIcon(
-            AppIcons.icNotify,
-            color: context.colorScheme.primary,
-          ),
-          selectedIcon: AppIcon(
-            AppIcons.icNotifyBold,
-            color: context.colorScheme.primary,
-          ),
-          label: context.l10n.notification,
+          icon:
+              Icon(Icons.favorite_outline, color: context.colorScheme.outline),
+          selectedIcon:
+              Icon(Icons.favorite, color: context.colorScheme.primary),
+          label: context.l10n.favorites,
         ),
         NavigationDestination(
-          icon: AppIcon(
-            AppIcons.icProfile,
-            color: context.colorScheme.primary,
-          ),
-          selectedIcon: AppIcon(
-            AppIcons.icProfileBold,
-            color: context.colorScheme.primary,
-          ),
-          label: context.l10n.menu,
+          icon: Icon(Icons.forum_outlined, color: context.colorScheme.outline),
+          selectedIcon: Icon(Icons.forum, color: context.colorScheme.primary),
+          label: context.l10n.message,
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.person_outline, color: context.colorScheme.outline),
+          selectedIcon: Icon(Icons.person, color: context.colorScheme.primary),
+          label: context.l10n.profile,
         ),
       ],
     );
-  }
-
-  static String? _routeToTitleText(BuildContext context, String route) {
-    if (route.contains(Routes.home)) {
-      return context.l10n.home;
-    } else if (route.contains(Routes.search)) {
-      return context.l10n.search;
-    } else if (route.contains(Routes.notification)) {
-      return context.l10n.notification;
-    } else if (route.contains(Routes.menu)) {
-      return context.l10n.menu;
-    } else {
-      return null;
-    }
   }
 
   static String _indexToRoute(int index) {
@@ -149,26 +131,27 @@ class _HomePageState extends State<HomePage> {
       case 1:
         return Routes.search;
       case 2:
-        return Routes.notification;
+        return Routes.favorite;
       case 3:
-        return Routes.menu;
+        return Routes.chat;
+      case 4:
+        return Routes.profile;
       default:
         return Routes.home;
     }
   }
 
   static int _routeToIndex(String route) {
-    switch (route) {
-      case Routes.home:
-        return 0;
-      case Routes.search:
-        return 1;
-      case Routes.notification:
-        return 2;
-      case Routes.menu:
-        return 3;
-      default:
-        return 0;
+    if (route.contains(Routes.search)) {
+      return 1;
+    } else if (route.contains(Routes.favorite)) {
+      return 2;
+    } else if (route.contains(Routes.chat)) {
+      return 3;
+    } else if (route.contains(Routes.profile)) {
+      return 4;
+    } else {
+      return 0;
     }
   }
 }

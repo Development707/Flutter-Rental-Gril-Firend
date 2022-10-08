@@ -26,18 +26,20 @@ class AppToggleButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Color mainPrimary = primary ?? context.colorScheme.primary;
+
     return ToggleButtons(
-      color: color ?? context.colors.neuTralVariant30,
-      selectedColor: primary ?? context.colorScheme.primary,
-      selectedBorderColor: primary ?? context.colorScheme.primary,
-      fillColor: primary?.withOpacity(0.1) ?? context.colors.primary95,
-      splashColor: primary?.withOpacity(0.2) ?? context.colors.primary80,
-      hoverColor: primary?.withOpacity(0.1) ?? context.colors.primary95,
+      color: color ?? context.colorScheme.surface,
+      selectedColor: mainPrimary,
+      selectedBorderColor: mainPrimary,
+      fillColor: mainPrimary.withOpacity(0.1),
+      splashColor: mainPrimary.withOpacity(0.2),
+      hoverColor: mainPrimary.withOpacity(0.1),
       borderRadius: BorderRadius.circular(context.sizes.p8),
-      borderColor: color ?? context.colors.neuTralVariant30,
+      borderColor: color ?? context.colorScheme.surface,
       borderWidth: 1,
       textStyle: context.typo.titleMedium.copyWith(
-          fontWeight: FontWeight.w500, color: context.colors.secondary10),
+          fontWeight: FontWeight.w500, color: context.colorScheme.secondary),
       // required
       isSelected: isSelected,
       onPressed: onPressed,

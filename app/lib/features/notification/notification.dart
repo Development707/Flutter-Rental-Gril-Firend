@@ -1,2 +1,2 @@
 export 'application/notification_service.dart';
-export 'presentation/notification/page/notification_page.dart';
+export 'presentation/page/notification_page.dart';

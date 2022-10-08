@@ -62,7 +62,7 @@ class DateTimeUtils {
     }
   }
 
-  static String? relative(
+  static String relative(
     DateTime? dateTime, {
     Duration? formatAfter,
     Duration? timeShowNow,

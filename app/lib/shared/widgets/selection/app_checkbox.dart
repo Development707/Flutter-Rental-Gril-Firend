@@ -23,13 +23,13 @@ class AppCheckbox extends StatelessWidget {
       visualDensity: VisualDensity.compact,
       focusColor: context.colorScheme.primary,
       activeColor: context.colorScheme.primary,
-      checkColor: context.colors.primary100,
+      checkColor: context.colorScheme.onPrimary,
       shape: shape ??
           RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(context.sizes.p4)),
       value: value,
-      side:
-          side ?? BorderSide(color: context.colors.neuTralVariant50, width: 2),
+      side: side ??
+          BorderSide(color: context.colorScheme.surfaceVariant, width: 2),
       onChanged: onChanged,
     );
   }

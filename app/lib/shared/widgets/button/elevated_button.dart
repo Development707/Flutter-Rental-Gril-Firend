@@ -7,7 +7,7 @@ import '../../common/common.dart';
 class AppElevatedButton extends StatelessWidget {
   const AppElevatedButton({
     super.key,
-    this.child,
+    required this.child,
     required this.onPressed,
     this.onLongPress,
     this.onHover,
@@ -53,6 +53,7 @@ class AppElevatedButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         elevation: 0,
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         padding: padding ?? context.insets.h16,
         shape: RoundedRectangleBorder(
             borderRadius:
@@ -65,8 +66,8 @@ class AppElevatedButton extends StatelessWidget {
           height != null
               ? height!
               : dense
-                  ? context.sizes.p4 * 12
-                  : context.sizes.p4 * 15,
+                  ? context.sizes.p40
+                  : context.sizes.p48,
         ),
         alignment: alignment,
       ),
@@ -79,7 +80,7 @@ class AppElevatedButton extends StatelessWidget {
         curve: Curves.fastOutSlowIn,
         child: isLoading
             ? SizedBox.square(
-                dimension: context.sizes.p48,
+                dimension: context.sizes.p40,
                 child: Lottie.asset(AppJson.customLoading),
               )
             : child,

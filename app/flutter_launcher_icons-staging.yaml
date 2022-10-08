@@ -1,5 +1,5 @@
 flutter_icons:
     android: true
     ios: true
-    image_path: 'assets/icons/staging-icon.png'
+    image_path: 'assets/images/staging-icon.png'
     remove_alpha_ios: true

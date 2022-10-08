@@ -56,8 +56,9 @@ class AppElevatedButtonIcon extends StatelessWidget {
     return ElevatedButton.icon(
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        surfaceTintColor: context.colors.primary10,
-        shadowColor: context.colors.primary10,
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        surfaceTintColor: context.colorScheme.onPrimaryContainer,
+        shadowColor: context.colorScheme.onPrimaryContainer,
         padding: padding ?? context.insets.h16,
         shape: RoundedRectangleBorder(
             borderRadius:
@@ -65,16 +66,16 @@ class AppElevatedButtonIcon extends StatelessWidget {
         textStyle: context.typo.titleMedium.copyWith(
             fontWeight: FontWeight.w500,
             color: onPressed != null
-                ? context.colors.primary100
-                : context.colors.neuTralVariant10),
+                ? context.colorScheme.onPrimary
+                : context.colorScheme.surface),
         backgroundColor: primary ?? context.colorScheme.primary,
         minimumSize: Size(
           expandedWith ? double.infinity : 0,
           height != null
               ? height!
               : dense
-                  ? context.sizes.p4 * 12
-                  : context.sizes.p4 * 15,
+                  ? context.sizes.p40
+                  : context.sizes.p48,
         ),
         alignment: alignment,
       ),

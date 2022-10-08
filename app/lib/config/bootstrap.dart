@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer' as dev;
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -35,6 +36,11 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
     () async {
       final WidgetsBinding widgetsBinding =
           WidgetsFlutterBinding.ensureInitialized();
+
+      SystemChrome.setPreferredOrientations(<DeviceOrientation>[
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ]);
 
       FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 

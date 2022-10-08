@@ -8,8 +8,9 @@ class Routes {
   /// Main router
   static const String home = '/home';
   static const String search = '/search';
-  static const String notification = '/notification';
-  static const String menu = '/menu';
+  static const String favorite = '/favorite';
+  static const String chat = '/chat';
+  static const String profile = '/profile';
 
   /// Other router
   static const String boarding = '/boarding';

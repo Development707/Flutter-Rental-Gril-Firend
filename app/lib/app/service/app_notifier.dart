@@ -11,7 +11,7 @@ class AppNotifier extends ChangeNotifier {
     _authBloc.stream.asBroadcastStream().listen((AuthenticationState state) {
       notifyListeners();
       Future<void>.delayed(
-          const Duration(milliseconds: 500), FlutterNativeSplash.remove);
+          const Duration(milliseconds: 200), FlutterNativeSplash.remove);
     });
   }
 

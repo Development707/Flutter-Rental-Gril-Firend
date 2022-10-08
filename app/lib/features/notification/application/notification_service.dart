@@ -1,8 +1,5 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 
-import '../../../router/router.dart';
-import '../../../router/routing.dart';
-import '../../../shared/common/common.dart';
 import '../../../shared/services/service.dart';
 
 class NotificationService {
@@ -20,9 +17,5 @@ class NotificationService {
 
   static void _onMessageOpenedApp(RemoteMessage message) {}
 
-  static void _onInitialMessage(RemoteMessage? message) {
-    if (message != null) {
-      Routing.navigatorKey.currentContext!.goRouter.go(Routes.notification);
-    }
-  }
+  static void _onInitialMessage(RemoteMessage? message) {}
 }

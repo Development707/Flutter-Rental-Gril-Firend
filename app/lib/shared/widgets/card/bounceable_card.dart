@@ -47,7 +47,7 @@ class BouncingBaseCard extends StatelessWidget {
                 vertical: context.sizes.p8,
               ),
           decoration: BoxDecoration(
-            color: backgroundColor ?? context.colors.primary100,
+            color: backgroundColor ?? context.colorScheme.onPrimary,
             borderRadius:
                 borderRadius ?? BorderRadius.circular(context.sizes.p12),
             boxShadow: withShadow
@@ -56,14 +56,14 @@ class BouncingBaseCard extends StatelessWidget {
                       BoxShadow(
                           offset: const Offset(0, 2),
                           blurRadius: 8,
-                          color: context.colors.neuTral10.withOpacity(.15)),
+                          color: context.colorScheme.surface.withOpacity(.15)),
                     ]
                 : null,
           ),
           child: Row(
             children: <Widget>[
               icon,
-              context.gaps.gapW24,
+              context.gaps.w24,
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

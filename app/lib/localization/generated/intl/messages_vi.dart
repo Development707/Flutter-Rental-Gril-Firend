@@ -126,6 +126,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "error_fixing": MessageLookupByLibrary.simpleMessage(
             "Có lỗi xảy ra, chúng tôi đang khắc phục"),
         "evening": MessageLookupByLibrary.simpleMessage("Tối"),
+        "explore": MessageLookupByLibrary.simpleMessage("Khám phá"),
+        "favorites": MessageLookupByLibrary.simpleMessage("Yêu thích"),
         "february": MessageLookupByLibrary.simpleMessage("Tháng 2"),
         "february_s": MessageLookupByLibrary.simpleMessage("T2"),
         "female": MessageLookupByLibrary.simpleMessage("Nữ"),
@@ -297,8 +299,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "token_session_expired": MessageLookupByLibrary.simpleMessage(
             "Phiên của bạn đã hết hạn, vui lòng đăng nhập lại"),
         "tomorrow": MessageLookupByLibrary.simpleMessage("Ngày mai"),
-        "top_favorite_teachers":
-            MessageLookupByLibrary.simpleMessage("Giáo viên được yêu thích"),
         "topic": MessageLookupByLibrary.simpleMessage("Chủ đề"),
         "total_score": MessageLookupByLibrary.simpleMessage("Tổng điểm"),
         "transfer": MessageLookupByLibrary.simpleMessage("Chuyển đổi"),

@@ -31,21 +31,21 @@ extension DefaultDialog on BuildContext {
               children: <Widget>[
                 if (image != null) ...<Widget>[
                   Center(child: image),
-                  context.gaps.gapH24,
+                  context.gaps.h24,
                 ],
                 DefaultTextStyle(
                   style: typo.titleLarge.weight600,
                   child: title,
                 ),
-                context.gaps.gapH8,
+                context.gaps.h8,
                 DefaultTextStyle(
                   style: typo.bodyLarge,
                   child: content,
                 ),
-                context.gaps.gapH24,
+                context.gaps.h24,
                 ...actions
                     .applySeparator(
-                      separator: context.gaps.gapH8,
+                      separator: context.gaps.h8,
                     )
                     .toList(),
               ],

@@ -103,32 +103,32 @@ class ThemeGapSizeData {
   final SizeData _spacing;
 
   /// Constant gap widths
-  SizedBox get gapW4 => SizedBox(width: _spacing.p4);
-  SizedBox get gapW8 => SizedBox(width: _spacing.p8);
-  SizedBox get gapW12 => SizedBox(width: _spacing.p12);
-  SizedBox get gapW16 => SizedBox(width: _spacing.p16);
-  SizedBox get gapW24 => SizedBox(width: _spacing.p24);
-  SizedBox get gapW32 => SizedBox(width: _spacing.p32);
-  SizedBox get gapW40 => SizedBox(width: _spacing.p40);
-  SizedBox get gapW48 => SizedBox(width: _spacing.p48);
-  SizedBox get gapW64 => SizedBox(width: _spacing.p64);
-  SizedBox get gapW56 => SizedBox(width: _spacing.p56);
-  SizedBox get gapW72 => SizedBox(width: _spacing.p72);
-  SizedBox get gapW80 => SizedBox(width: _spacing.p80);
-  SizedBox get gapW96 => SizedBox(width: _spacing.p96);
+  SizedBox get w4 => SizedBox(width: _spacing.p4);
+  SizedBox get w8 => SizedBox(width: _spacing.p8);
+  SizedBox get w12 => SizedBox(width: _spacing.p12);
+  SizedBox get w16 => SizedBox(width: _spacing.p16);
+  SizedBox get w24 => SizedBox(width: _spacing.p24);
+  SizedBox get w32 => SizedBox(width: _spacing.p32);
+  SizedBox get w40 => SizedBox(width: _spacing.p40);
+  SizedBox get w48 => SizedBox(width: _spacing.p48);
+  SizedBox get w64 => SizedBox(width: _spacing.p64);
+  SizedBox get w56 => SizedBox(width: _spacing.p56);
+  SizedBox get w72 => SizedBox(width: _spacing.p72);
+  SizedBox get w80 => SizedBox(width: _spacing.p80);
+  SizedBox get w96 => SizedBox(width: _spacing.p96);
 
-  /// Constant gap heights
-  SizedBox get gapH4 => SizedBox(height: _spacing.p4);
-  SizedBox get gapH8 => SizedBox(height: _spacing.p8);
-  SizedBox get gapH12 => SizedBox(height: _spacing.p12);
-  SizedBox get gapH16 => SizedBox(height: _spacing.p16);
-  SizedBox get gapH24 => SizedBox(height: _spacing.p24);
-  SizedBox get gapH32 => SizedBox(height: _spacing.p32);
-  SizedBox get gapH40 => SizedBox(height: _spacing.p40);
-  SizedBox get gapH48 => SizedBox(height: _spacing.p48);
-  SizedBox get gapH56 => SizedBox(height: _spacing.p56);
-  SizedBox get gapH64 => SizedBox(height: _spacing.p64);
-  SizedBox get gapH72 => SizedBox(height: _spacing.p72);
-  SizedBox get gapH80 => SizedBox(height: _spacing.p80);
-  SizedBox get gapH96 => SizedBox(height: _spacing.p96);
+  /// Constant wheights
+  SizedBox get h4 => SizedBox(height: _spacing.p4);
+  SizedBox get h8 => SizedBox(height: _spacing.p8);
+  SizedBox get h12 => SizedBox(height: _spacing.p12);
+  SizedBox get h16 => SizedBox(height: _spacing.p16);
+  SizedBox get h24 => SizedBox(height: _spacing.p24);
+  SizedBox get h32 => SizedBox(height: _spacing.p32);
+  SizedBox get h40 => SizedBox(height: _spacing.p40);
+  SizedBox get h48 => SizedBox(height: _spacing.p48);
+  SizedBox get h56 => SizedBox(height: _spacing.p56);
+  SizedBox get h64 => SizedBox(height: _spacing.p64);
+  SizedBox get h72 => SizedBox(height: _spacing.p72);
+  SizedBox get h80 => SizedBox(height: _spacing.p80);
+  SizedBox get h96 => SizedBox(height: _spacing.p96);
 }

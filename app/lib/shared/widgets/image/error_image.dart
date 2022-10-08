@@ -8,18 +8,17 @@ class ErrorImage extends StatelessWidget {
 
   final double? size;
   final bool isRounded;
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(isRounded ? 50 : 0),
-        child: Container(
-          decoration: BoxDecoration(
-            color: context.colors.neuTral99,
-          ),
-          child: Image.asset(AppImages.avatar, height: size),
-        ),
+    return Container(
+      alignment: Alignment.center,
+      padding: context.insets.a8,
+      decoration: BoxDecoration(
+        color: context.colorScheme.background,
+        shape: isRounded ? BoxShape.circle : BoxShape.rectangle,
       ),
+      child: Image.asset(AppImages.avatar, height: size),
     );
   }
 }

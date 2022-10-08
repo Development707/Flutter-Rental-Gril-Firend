@@ -28,11 +28,11 @@ class AppIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       icon,
-      width: size,
-      height: size,
+      width: size ?? context.sizes.p40,
+      height: size ?? context.sizes.p40,
       alignment: alignment,
       fit: fit,
-      color: color ?? context.colorScheme.onPrimaryContainer,
+      color: color,
     );
   }
 }

@@ -4,7 +4,6 @@ import '../../../constants/constants.dart';
 import '../../common/common.dart';
 import '../app_icon.dart';
 import '../button/elevated_button.dart';
-import '../button/text_button.dart';
 
 extension ConfirmDialog on BuildContext {
   Future<bool> showConfirmDialog<T>({
@@ -44,14 +43,13 @@ extension ConfirmDialog on BuildContext {
                   Row(
                     children: <Widget>[
                       Expanded(
-                        child: AppTextButton(
-                            primary: colorScheme.onSecondaryContainer,
+                        child: InkWell(
                             child: negative ?? Text(l10n.cancel),
-                            onPressed: () =>
+                            onTap: () =>
                                 Navigator.of(context, rootNavigator: true)
                                     .pop(false)),
                       ),
-                      gaps.gapW16,
+                      gaps.w16,
                       Expanded(
                         child: AppElevatedButton(
                             primary: colorScheme.primary,
@@ -62,7 +60,7 @@ extension ConfirmDialog on BuildContext {
                       ),
                     ],
                   )
-                ].applySeparator(separator: gaps.gapH16),
+                ].applySeparator(separator: gaps.h16),
               ),
               Positioned(
                   top: -sizes.p16,
@@ -76,8 +74,6 @@ extension ConfirmDialog on BuildContext {
         );
       },
     );
-
-    await Future<void>.delayed(const Duration(milliseconds: 500));
 
     return result ?? false;
   }

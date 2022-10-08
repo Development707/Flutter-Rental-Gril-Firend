@@ -15,7 +15,7 @@ class RoundedRectImage extends StatelessWidget {
 
   final String? imageURL;
   final double? width, height;
-  final BorderRadius? borderRadius;
+  final BorderRadiusGeometry? borderRadius;
 
   @override
   Widget build(BuildContext context) {

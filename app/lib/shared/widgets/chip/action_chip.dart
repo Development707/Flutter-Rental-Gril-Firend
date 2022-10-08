@@ -30,15 +30,15 @@ class AppActionChip extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(context.sizes.p8),
         side: side ??
-            BorderSide(color: selectedColor ?? context.colors.neuTralVariant10),
+            BorderSide(color: selectedColor ?? context.colorScheme.surface),
       ),
       elevation: 0,
       avatar: avatar,
-      backgroundColor: backgroundColor ?? context.colors.transparent,
-      shadowColor: context.colors.primary10,
+      backgroundColor: backgroundColor ?? Colors.transparent,
+      shadowColor: context.colorScheme.onPrimaryContainer,
       labelStyle: context.typo.labelLarge.copyWith(
           fontWeight: FontWeight.w600,
-          color: selectedColor ?? context.colors.neuTralVariant30),
+          color: selectedColor ?? context.colorScheme.surface),
       // required
       label: label,
       onPressed: onPressed,

@@ -54,22 +54,24 @@ class AppOutlinedButton extends StatelessWidget {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
         elevation: 0,
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         padding: padding ?? context.insets.h16,
         side: BorderSide(
             color: primary ?? context.colorScheme.primary,
-            width: context.sizes.p4 / 2),
+            width: width ?? context.sizes.p4 / 4),
         shape: RoundedRectangleBorder(
             borderRadius:
                 borderRadius ?? BorderRadius.circular(context.sizes.p8)),
         textStyle: context.typo.titleMedium.weight500,
         foregroundColor: primary ?? context.colorScheme.primary,
+        surfaceTintColor: primary ?? context.colorScheme.primary,
         minimumSize: Size(
           expandedWith ? double.infinity : 0,
           height != null
               ? height!
               : dense
-                  ? context.sizes.p4 * 12
-                  : context.sizes.p4 * 15,
+                  ? context.sizes.p40
+                  : context.sizes.p48,
         ),
         alignment: alignment,
       ),

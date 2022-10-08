@@ -39,7 +39,7 @@ class AppFilterChip extends StatelessWidget {
             BorderSide(
                 color: selected
                     ? selectedColor ?? context.colorScheme.primary
-                    : context.colors.neuTralVariant10),
+                    : context.colorScheme.surface),
       ),
       elevation: selected ? 2 : 0,
       showCheckmark: showCheckmark,
@@ -47,16 +47,16 @@ class AppFilterChip extends StatelessWidget {
       avatarBorder: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(context.sizes.p4)),
       backgroundColor: backgroundColor,
-      selectedColor: context.colors.primary100,
-      disabledColor: context.colors.neuTral90,
-      shadowColor: context.colors.primary10,
-      selectedShadowColor: context.colors.primary10,
+      selectedColor: context.colorScheme.onPrimary,
+      disabledColor: context.colorScheme.surface,
+      shadowColor: context.colorScheme.onPrimaryContainer,
+      selectedShadowColor: context.colorScheme.onPrimaryContainer,
       checkmarkColor: selectedColor ?? context.colorScheme.primary,
       labelStyle: context.typo.labelLarge.copyWith(
           fontWeight: FontWeight.w600,
           color: selected
               ? context.colorScheme.primary
-              : context.colors.neuTralVariant30),
+              : context.colorScheme.surface),
       // required
       label: label,
       selected: selected,

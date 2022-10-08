@@ -21,6 +21,7 @@ class CustomBackButton extends StatelessWidget {
     return IconButton(
       icon: AppIcon(
         AppIcons.icArrowLeft,
+        size: context.sizes.p32,
         color: context.colorScheme.onPrimaryContainer,
       ),
       onPressed: onPressed ??

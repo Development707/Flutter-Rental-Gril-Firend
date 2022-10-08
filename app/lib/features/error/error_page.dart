@@ -18,7 +18,7 @@ class ErrorPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Expanded(flex: 2, child: EmptyWidget(title: error.toString())),
-          context.gaps.gapW16,
+          context.gaps.w16,
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +46,7 @@ class ErrorPage extends StatelessWidget {
           onPressed: () =>
               context.canPop() ? context.pop() : context.go(Routes.home),
         ),
-        context.gaps.gapH16,
+        context.gaps.h16,
         AppElevatedButton(
           child: Text(context.l10n.back_to_home),
           onPressed: () => context.go(Routes.home),

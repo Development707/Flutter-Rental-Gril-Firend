@@ -56,6 +56,7 @@ class AppIcons {
   static const String icEyeSlash = 'assets/icons/ic_eye_slash.svg';
   static const String icGender = 'assets/icons/ic_gender.svg';
   static const String icGift = 'assets/icons/ic_gift.svg';
+  static const String icGoogle = 'assets/icons/ic_google.svg';
   static const String icGallery = 'assets/icons/ic_gallery.svg';
   static const String icHeartCheck = 'assets/icons/ic_heart_check.svg';
   static const String icHistory = 'assets/icons/ic_history.svg';
@@ -67,6 +68,7 @@ class AppIcons {
   static const String icUnlock = 'assets/icons/ic_unlock.svg';
   static const String icLockRefresh = 'assets/icons/ic_lock_refresh.svg';
   static const String icLogout = 'assets/icons/ic_logout.svg';
+  static const String icMasterCard = 'assets/icons/ic_master_card.svg';
   static const String icMenu = 'assets/icons/ic_menu.svg';
   static const String icMessage = 'assets/icons/ic_message.svg';
   static const String icMessageBold = 'assets/icons/ic_message_bold.svg';
@@ -84,8 +86,9 @@ class AppIcons {
       'assets/icons/ic_medal_confirm_bold.svg';
   static const String icNote = 'assets/icons/ic_note.svg';
   static const String icNewSolid = 'assets/icons/ic_new_solid.svg';
-  static const String icNotify = 'assets/icons/ic_notify.svg';
   static const String icNotifyBold = 'assets/icons/ic_notify_bold.svg';
+  static const String icNotify = 'assets/icons/ic_notify.svg';
+  static const String icPaypal = 'assets/icons/ic_paypal.svg';
   static const String icProfileAdd = 'assets/icons/ic_profile_add.svg';
   static const String icProfile = 'assets/icons/ic_profile.svg';
   static const String icProfileBold = 'assets/icons/ic_profile_bold.svg';
@@ -101,8 +104,7 @@ class AppIcons {
       'assets/icons/ic_rounded_rect_check.svg';
   static const String icRoundedRectUnCheck =
       'assets/icons/ic_rounded_rect_uncheck.svg';
-  static const String icSearch = 'assets/icons/ic_search.svg';
-  static const String icSearchStatus = 'assets/icons/ic_search_status.svg';
+  static const String icSearchOutline = 'assets/icons/ic_search_outline.svg';
   static const String icShieldTick = 'assets/icons/ic_shield_tick.svg';
   static const String icSkype = 'assets/icons/ic_skype.svg';
   static const String icSms = 'assets/icons/ic_sms.svg';

@@ -66,9 +66,6 @@ extension NetworkExceptionDialog on BuildContext {
       actions: actions,
     );
 
-    // Fix animation close dialog
-    await Future<void>.delayed(const Duration(milliseconds: 500));
-
     /// The returned result will perform the action
     /// 0. no action
     /// 1. go login

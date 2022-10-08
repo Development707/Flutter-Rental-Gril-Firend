@@ -20,9 +20,9 @@ class EmptyWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Image.asset(AppImages.notFound),
-        context.gaps.gapH16,
+        context.gaps.h16,
         Text(title ?? context.l10n.empty_title, style: context.typo.titleLarge),
-        context.gaps.gapH4,
+        context.gaps.h4,
         Text('$content', style: context.typo.headlineMedium),
       ],
     );

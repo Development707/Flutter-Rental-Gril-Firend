@@ -780,6 +780,26 @@ class AppLanguage {
     );
   }
 
+  /// `Khám phá`
+  String get explore {
+    return Intl.message(
+      'Khám phá',
+      name: 'explore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yêu thích`
+  String get favorites {
+    return Intl.message(
+      'Yêu thích',
+      name: 'favorites',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tháng 2`
   String get february {
     return Intl.message(
@@ -2225,16 +2245,6 @@ class AppLanguage {
     return Intl.message(
       'Ngày mai',
       name: 'tomorrow',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Giáo viên được yêu thích`
-  String get top_favorite_teachers {
-    return Intl.message(
-      'Giáo viên được yêu thích',
-      name: 'top_favorite_teachers',
       desc: '',
       args: [],
     );

@@ -6,8 +6,15 @@ class ThemeProvider extends InheritedTheme {
 
   final ThemeDataContainer data;
 
-  static ThemeDataContainer of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<ThemeProvider>()!.data;
+  static ThemeProvider of(BuildContext context) {
+    final ThemeProvider? instance = ThemeProvider.maybeOf(context);
+    assert(instance != null,
+        'No instance of ThemeProvider present in the widget tree.');
+    return instance!;
+  }
+
+  static ThemeProvider? maybeOf(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<ThemeProvider>();
   }
 
   @override

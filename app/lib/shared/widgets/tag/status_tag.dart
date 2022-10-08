@@ -29,7 +29,7 @@ class StatusTag extends StatelessWidget {
             shape: BoxShape.circle,
           ),
         ),
-        context.gaps.gapW16,
+        context.gaps.w16,
         Flexible(child: Text(text, style: style ?? context.typo.bodyMedium)),
       ],
     );

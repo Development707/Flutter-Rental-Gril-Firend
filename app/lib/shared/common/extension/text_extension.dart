@@ -6,6 +6,10 @@ extension TextStyleExtension on TextStyle {
   TextStyle get weight500 => copyWith(fontWeight: FontWeight.w500);
   TextStyle get weight600 => copyWith(fontWeight: FontWeight.w600);
   TextStyle get weight700 => copyWith(fontWeight: FontWeight.w700);
+  TextStyle get weight800 => copyWith(fontWeight: FontWeight.w800);
+  TextStyle get weight900 => copyWith(fontWeight: FontWeight.w900);
+
+  TextStyle get italic => copyWith(fontStyle: FontStyle.italic);
 }
 
 extension NullableStringExtension on String? {

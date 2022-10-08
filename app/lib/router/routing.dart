@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../app/service/app_notifier.dart';
+import '../app/service/app_service.dart';
 import '../config/dependency_container.dart';
 import '../features/authentication/authentication.dart';
+import '../features/chat/chat.dart';
 import '../features/error/error_page.dart';
-import '../features/help_center/help_center.dart';
+import '../features/favorite/favorite.dart';
 import '../features/home/home.dart';
 import '../features/notification/notification.dart';
-import '../features/rental_girl/rental_girl.dart';
+import '../features/profile/profile.dart';
+import '../features/rental/rental.dart';
 import '../features/search/search.dart';
 import 'router.dart';
 import 'transition_page.dart';
@@ -21,8 +23,9 @@ class Routing {
 
   static GoRouter router = GoRouter(
     navigatorKey: navigatorKey,
-    initialLocation: Routes.auth,
+    observers: <NavigatorObserver>[HeroController()],
     debugLogDiagnostics: true,
+    initialLocation: Routes.auth,
     refreshListenable: AppNotifier(),
     redirect: (_, GoRouterState goState) {
       // Page allow all user
@@ -61,7 +64,7 @@ class Routing {
             path: Routes.home,
             name: Routes.home,
             pageBuilder: (_, __) =>
-                const FadeTransitionPage(child: RentalGirlPage()),
+                const FadeTransitionPage(child: RentalPage()),
             routes: _homeRouting,
           ),
           GoRoute(
@@ -72,17 +75,24 @@ class Routing {
             routes: _searchRouting,
           ),
           GoRoute(
-            path: Routes.notification,
-            name: Routes.notification,
+            path: Routes.favorite,
+            name: Routes.favorite,
             pageBuilder: (_, __) =>
-                const FadeTransitionPage(child: NotificationPage()),
-            routes: _notificationRouting,
+                const FadeTransitionPage(child: FavoritePage()),
+            routes: _favoriteRouting,
           ),
           GoRoute(
-            path: Routes.menu,
-            name: Routes.menu,
-            pageBuilder: (_, __) => const FadeTransitionPage(child: MenuPage()),
-            routes: _menuRouting,
+            path: Routes.chat,
+            name: Routes.chat,
+            pageBuilder: (_, __) => const FadeTransitionPage(child: ChatPage()),
+            routes: _chatRouting,
+          ),
+          GoRoute(
+            path: Routes.profile,
+            name: Routes.profile,
+            pageBuilder: (_, __) =>
+                const FadeTransitionPage(child: ProfilePage()),
+            routes: _profileRouting,
           ),
         ],
       ),
@@ -91,26 +101,48 @@ class Routing {
         ScaleTransitionPage(child: ErrorPage(error: state.error)),
   );
 
-  static final List<RouteBase> _authRouting = <RouteBase>[];
+  /* ------------- Authentication Router -------------------- */
 
-  static final List<RouteBase> _homeRouting = <RouteBase>[
+  static final List<RouteBase> _authRouting = <RouteBase>[
     GoRoute(
-      path: RentalGirlDetailPage.routerPath,
+      path: LoginPasswordPage.routerPath,
       pageBuilder: (_, __) =>
-          const CupertinoTransitionPage(child: RentalGirlDetailPage()),
-    )
+          const CupertinoTransitionPage(child: LoginPasswordPage()),
+    ),
   ];
+
+  /* ------------- Main Router ------------------------------ */
+
+  static final List<RouteBase> _homeRouting = <RouteBase>[];
 
   static final List<RouteBase> _searchRouting = <RouteBase>[];
 
-  static final List<RouteBase> _notificationRouting = <RouteBase>[];
+  static final List<RouteBase> _favoriteRouting = <RouteBase>[];
 
-  static final List<RouteBase> _menuRouting = <RouteBase>[
+  static final List<RouteBase> _chatRouting = <RouteBase>[];
+
+  static final List<RouteBase> _profileRouting = <RouteBase>[
     GoRoute(
-      parentNavigatorKey: navigatorKey,
-      path: HelpCenterPage.routerPath,
+      path: ProfileMyBookingPage.routerPath,
       pageBuilder: (_, __) =>
-          const CupertinoTransitionPage(child: HelpCenterPage()),
-    )
+          const CupertinoTransitionPage(child: ProfileMyBookingPage()),
+    ),
+    GoRoute(
+      path: ProfilePaymentsPage.routerPath,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: ProfilePaymentsPage()),
+    ),
+    GoRoute(
+      path: MyProfilePage.routerPath,
+      parentNavigatorKey: navigatorKey,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: MyProfilePage()),
+    ),
+    GoRoute(
+      path: NotificationPage.routerPath,
+      parentNavigatorKey: navigatorKey,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: NotificationPage()),
+    ),
   ];
 }

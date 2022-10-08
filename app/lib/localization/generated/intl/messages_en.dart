@@ -133,6 +133,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "error_fixing": MessageLookupByLibrary.simpleMessage(
             "An error has occurred, we are fixing"),
         "evening": MessageLookupByLibrary.simpleMessage("Evening"),
+        "explore": MessageLookupByLibrary.simpleMessage("Explore"),
+        "favorites": MessageLookupByLibrary.simpleMessage("Favorites"),
         "february": MessageLookupByLibrary.simpleMessage("February"),
         "february_s": MessageLookupByLibrary.simpleMessage("Feb"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
@@ -302,8 +304,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "token_session_expired": MessageLookupByLibrary.simpleMessage(
             "Your session expired, please login again"),
         "tomorrow": MessageLookupByLibrary.simpleMessage("Tomorrow"),
-        "top_favorite_teachers":
-            MessageLookupByLibrary.simpleMessage("Top favorite teachers"),
         "topic": MessageLookupByLibrary.simpleMessage("Topic"),
         "total_score": MessageLookupByLibrary.simpleMessage("Total score"),
         "transfer": MessageLookupByLibrary.simpleMessage("Transfer"),

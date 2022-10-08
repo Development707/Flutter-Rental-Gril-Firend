@@ -62,7 +62,7 @@ extension CustomizeContextExt on BuildContext {
 
   GoRouter get goRouter => GoRouter.of(this);
 
-  ThemeDataContainer get themeProvider => ThemeProvider.of(this);
+  ThemeDataContainer get themeProvider => ThemeProvider.of(this).data;
 
   SizeData get sizes => themeProvider.sizes;
 
@@ -70,9 +70,9 @@ extension CustomizeContextExt on BuildContext {
 
   ThemeGapSizeData get gaps => sizes.gaps;
 
-  ColorPaletteData get colors => themeProvider.colors;
-
   TypographyData get typo => themeProvider.typographys;
+
+  // CustomColorScheme get customColorScheme => themeProvider.customColorScheme;
 
   ThemeData get theme => Theme.of(this);
 
