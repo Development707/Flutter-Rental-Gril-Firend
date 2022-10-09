@@ -19,23 +19,27 @@ class AppSettingsCubit extends Cubit<AppSettingsState> {
 
     // Change settings
     changeThemeMode(ThemeMode.system);
-    changeLocalee(SchedulerBinding.instance.window.locale);
+    changeLocale(SchedulerBinding.instance.window.locale);
   }
 
   static const Locale viLanguage = Locale('vi', 'VN');
   static const Locale enLanguage = Locale('en', 'US');
 
-  void changeThemeMode(ThemeMode themeMode) {
-    emit(state.copyWith(themeMode: themeMode));
+  void changeThemeMode(ThemeMode? themeMode) {
+    if (themeMode != null && themeMode != state.themeMode) {
+      emit(state.copyWith(themeMode: themeMode));
+    }
   }
 
   void changeThemeDataContainer(ThemeDataContainer theme) {
     emit(state.copyWith(themeDataContainer: theme));
   }
 
-  void changeLocalee(Locale locale) {
-    emit(state.copyWith(
-      locale: locale.languageCode == 'vi' ? viLanguage : enLanguage,
-    ));
+  void changeLocale(Locale? locale) {
+    if (locale != null && locale != state.locale) {
+      emit(state.copyWith(
+        locale: locale.languageCode == 'vi' ? viLanguage : enLanguage,
+      ));
+    }
   }
 }

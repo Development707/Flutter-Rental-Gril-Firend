@@ -35,12 +35,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Account": MessageLookupByLibrary.simpleMessage("Tài khoản"),
         "accept": MessageLookupByLibrary.simpleMessage("Chấp nhận"),
         "account": MessageLookupByLibrary.simpleMessage("Tài khoản"),
         "account_info":
             MessageLookupByLibrary.simpleMessage("Thông tin tài khoản"),
         "achievement": MessageLookupByLibrary.simpleMessage("Thành tựu"),
+        "active": MessageLookupByLibrary.simpleMessage("Hoạt động"),
         "add": MessageLookupByLibrary.simpleMessage("Thêm"),
+        "add_new_payments":
+            MessageLookupByLibrary.simpleMessage("Thêm thanh toán mới"),
         "add_voucher": MessageLookupByLibrary.simpleMessage("Thêm voucher"),
         "add_your_goal":
             MessageLookupByLibrary.simpleMessage("Thêm mục tiêu của bạn"),
@@ -48,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "afternoon": MessageLookupByLibrary.simpleMessage("Chiều"),
         "age": MessageLookupByLibrary.simpleMessage("Tuổi"),
         "all": MessageLookupByLibrary.simpleMessage("Tất cả"),
+        "app_update": MessageLookupByLibrary.simpleMessage("Cập nhật ứng dụng"),
         "apply": MessageLookupByLibrary.simpleMessage("Áp dụng"),
         "april": MessageLookupByLibrary.simpleMessage("Tháng 4"),
         "april_s": MessageLookupByLibrary.simpleMessage("Apr"),
@@ -56,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "back": MessageLookupByLibrary.simpleMessage("Quay lại"),
         "back_to_home": MessageLookupByLibrary.simpleMessage("Về trang chủ"),
         "begin": MessageLookupByLibrary.simpleMessage("Bắt đầu"),
+        "biometric_id": MessageLookupByLibrary.simpleMessage("Sinh trắc học"),
         "birthday": MessageLookupByLibrary.simpleMessage("Ngày sinh"),
         "can_not_open": MessageLookupByLibrary.simpleMessage("Không mở được"),
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
@@ -63,10 +69,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_schedule": MessageLookupByLibrary.simpleMessage("Huỷ lịch"),
         "cancel_selected": MessageLookupByLibrary.simpleMessage("Bỏ chọn"),
         "cancelled": MessageLookupByLibrary.simpleMessage("Đã huỷ"),
+        "cashback": MessageLookupByLibrary.simpleMessage("Hoàn lại tiền"),
         "change_calendar": MessageLookupByLibrary.simpleMessage("Đổi lịch"),
         "change_password": MessageLookupByLibrary.simpleMessage("Đổi mật khẩu"),
         "change_password_successfully": MessageLookupByLibrary.simpleMessage(
             "Thay đổi mật khẩu thành công"),
+        "change_pin": MessageLookupByLibrary.simpleMessage("Thay đổi pin"),
         "choose_date": MessageLookupByLibrary.simpleMessage("Chọn ngày"),
         "choose_gender":
             MessageLookupByLibrary.simpleMessage("Hãy chọn giới tính"),
@@ -91,12 +99,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Áp dụng voucher"),
         "confirm_your_request":
             MessageLookupByLibrary.simpleMessage("Xác nhận yêu cầu"),
+        "connected": MessageLookupByLibrary.simpleMessage("Đã kết nối"),
         "connection_error": MessageLookupByLibrary.simpleMessage("Lỗi kết nối"),
         "connection_lost":
             MessageLookupByLibrary.simpleMessage("Không có kết nối mạng"),
+        "contact_us": MessageLookupByLibrary.simpleMessage("Liên hệ chúng tôi"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Tạo tài khoản"),
         "create_profile": MessageLookupByLibrary.simpleMessage("Tạo hồ sơ"),
+        "customer_service":
+            MessageLookupByLibrary.simpleMessage("Dịch vụ chăm sóc khách hàng"),
+        "dark": MessageLookupByLibrary.simpleMessage("Tối"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("Chế độ tối"),
         "day_started": MessageLookupByLibrary.simpleMessage("Ngày bắt đầu"),
         "days": MessageLookupByLibrary.simpleMessage("ngày"),
         "days_relative": m0,
@@ -112,9 +126,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "done": MessageLookupByLibrary.simpleMessage("Xong"),
         "dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Không có tài khoản?"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_or_phone_number":
             MessageLookupByLibrary.simpleMessage("Email hoặc số điện thoại"),
         "empty_title": MessageLookupByLibrary.simpleMessage("Tiêu đề rỗng"),
+        "english": MessageLookupByLibrary.simpleMessage("Tiếng Anh"),
         "enter_sent_otp": MessageLookupByLibrary.simpleMessage("Nhập mã OTP"),
         "enter_value": m2,
         "enter_your_new_password":
@@ -136,6 +152,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Quên mật khẩu?"),
         "free": MessageLookupByLibrary.simpleMessage("Miễn phí"),
+        "frequently_asked_questions":
+            MessageLookupByLibrary.simpleMessage("Câu hỏi thường gặp"),
         "friday": MessageLookupByLibrary.simpleMessage("Thứ sáu"),
         "friday_s": MessageLookupByLibrary.simpleMessage("T6"),
         "friend_referral":
@@ -143,7 +161,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "full": MessageLookupByLibrary.simpleMessage("Đầy đủ"),
         "full_name": MessageLookupByLibrary.simpleMessage("Họ và tên"),
         "gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
+        "general": MessageLookupByLibrary.simpleMessage("Chung"),
+        "general_notification":
+            MessageLookupByLibrary.simpleMessage("Thông báo chung"),
         "get_now": MessageLookupByLibrary.simpleMessage("Nhận ngay"),
+        "google_authentication":
+            MessageLookupByLibrary.simpleMessage("Xác thực Google"),
         "hello": MessageLookupByLibrary.simpleMessage("Xin chào"),
         "hello_someone": m3,
         "help_center":
@@ -153,10 +176,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "hours": MessageLookupByLibrary.simpleMessage("giờ"),
         "hours_relative": m4,
         "i_got_it": MessageLookupByLibrary.simpleMessage("Tôi hiểu rồi"),
+        "internet_connected":
+            MessageLookupByLibrary.simpleMessage("Kết nối Internet"),
+        "internet_lost": MessageLookupByLibrary.simpleMessage("Mất Internet"),
         "invalid_format_or_value_error":
             MessageLookupByLibrary.simpleMessage("Yêu cầu bị hủy sớm"),
+        "invite": MessageLookupByLibrary.simpleMessage("Mời"),
+        "invite_firend": MessageLookupByLibrary.simpleMessage("Mời bạn bè"),
         "june": MessageLookupByLibrary.simpleMessage("Tháng 6"),
         "june_s": MessageLookupByLibrary.simpleMessage("Jun"),
+        "language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "lastest_reviews":
             MessageLookupByLibrary.simpleMessage("Đánh giá mới nhất"),
         "late_night": MessageLookupByLibrary.simpleMessage("Khuya"),
@@ -166,6 +195,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "learnt": MessageLookupByLibrary.simpleMessage("Đã học"),
         "lession": MessageLookupByLibrary.simpleMessage("Bài học"),
         "let_go": MessageLookupByLibrary.simpleMessage("Bắt đầu"),
+        "light": MessageLookupByLibrary.simpleMessage("Sáng"),
         "list_videos": MessageLookupByLibrary.simpleMessage("Danh sách videos"),
         "log_in": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "log_out": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
@@ -178,6 +208,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Sai tên đăng nhập hoặc mật khẩu"),
         "login_to_continue":
             MessageLookupByLibrary.simpleMessage("Đăng nhập để tiếp tục"),
+        "login_to_your_account": MessageLookupByLibrary.simpleMessage(
+            "Đăng nhập vào tài khoản của bạn"),
         "main_course": MessageLookupByLibrary.simpleMessage("Khoá chính"),
         "male": MessageLookupByLibrary.simpleMessage("Nam"),
         "march": MessageLookupByLibrary.simpleMessage("Tháng 3"),
@@ -197,8 +229,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "months": MessageLookupByLibrary.simpleMessage("tháng"),
         "more": MessageLookupByLibrary.simpleMessage("Thêm"),
         "morning": MessageLookupByLibrary.simpleMessage("Sáng"),
+        "my_booking": MessageLookupByLibrary.simpleMessage("Đặt chỗ của tôi"),
         "nationality": MessageLookupByLibrary.simpleMessage("Quốc tịch"),
         "new_password": MessageLookupByLibrary.simpleMessage("Mật khẩu mới"),
+        "new_service_available":
+            MessageLookupByLibrary.simpleMessage("Dịch vụ mới có sẵn"),
+        "new_tip_available":
+            MessageLookupByLibrary.simpleMessage("Mẹo mới có sẵn"),
         "next": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
         "night": MessageLookupByLibrary.simpleMessage("Tối"),
         "no": MessageLookupByLibrary.simpleMessage("Không"),
@@ -224,16 +261,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "other_error": MessageLookupByLibrary.simpleMessage("Lỗi khác"),
         "other_reason": MessageLookupByLibrary.simpleMessage("Lý do khác"),
         "overview": MessageLookupByLibrary.simpleMessage("Tổng quan"),
+        "paid": MessageLookupByLibrary.simpleMessage("Trả"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
+        "payments": MessageLookupByLibrary.simpleMessage("Thanh toán"),
         "pending": MessageLookupByLibrary.simpleMessage("Trì hoãn"),
         "phone_number": MessageLookupByLibrary.simpleMessage("Số điện thoại"),
         "pick": MessageLookupByLibrary.simpleMessage("chọn"),
         "picked": MessageLookupByLibrary.simpleMessage("Đã chọn"),
         "present": MessageLookupByLibrary.simpleMessage("Bây giờ"),
         "profile": MessageLookupByLibrary.simpleMessage("Hồ sơ"),
+        "promo_and_discount":
+            MessageLookupByLibrary.simpleMessage("Khuyến mại & Giảm giá"),
         "promo_gift": MessageLookupByLibrary.simpleMessage("Ưu đãi đổi quà"),
         "quick_join": MessageLookupByLibrary.simpleMessage("Tham gia ngay"),
         "reason": MessageLookupByLibrary.simpleMessage("Lý do"),
+        "receipt": MessageLookupByLibrary.simpleMessage("Biên nhận"),
         "receive": MessageLookupByLibrary.simpleMessage("Nhận"),
         "referral": MessageLookupByLibrary.simpleMessage("Mã giới thiệu"),
         "regions": MessageLookupByLibrary.simpleMessage("Vùng miền"),
@@ -242,6 +284,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("thời lượng đăng ký"),
         "reject": MessageLookupByLibrary.simpleMessage("Từ chối"),
         "rejected": MessageLookupByLibrary.simpleMessage("Đã"),
+        "remember_me": MessageLookupByLibrary.simpleMessage("Nhớ tài khoản"),
         "remove_seleted": MessageLookupByLibrary.simpleMessage("Bỏ đã chọn"),
         "request": MessageLookupByLibrary.simpleMessage("Yêu cầu"),
         "request_cancelled_prematurely":
@@ -261,6 +304,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saturday_s": MessageLookupByLibrary.simpleMessage("T7"),
         "save": MessageLookupByLibrary.simpleMessage("Lưu"),
         "search": MessageLookupByLibrary.simpleMessage("Tìm kiếm"),
+        "security": MessageLookupByLibrary.simpleMessage("Bảo mật"),
         "see_more": MessageLookupByLibrary.simpleMessage("Xem thêm"),
         "select_all": MessageLookupByLibrary.simpleMessage("Chọn tất cả"),
         "selected": MessageLookupByLibrary.simpleMessage("Đã chọn"),
@@ -269,6 +313,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "september": MessageLookupByLibrary.simpleMessage("Tháng 9"),
         "september_s": MessageLookupByLibrary.simpleMessage("Sep"),
         "serrver_error": MessageLookupByLibrary.simpleMessage("Lỗi máy chủ"),
+        "service": MessageLookupByLibrary.simpleMessage("Dịch vụ"),
         "service_feedback":
             MessageLookupByLibrary.simpleMessage("Phản hồi dịch vụ"),
         "session": MessageLookupByLibrary.simpleMessage("Buổi học"),
@@ -278,12 +323,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "session_video": MessageLookupByLibrary.simpleMessage("Video buổi học"),
         "show": MessageLookupByLibrary.simpleMessage("Hiển thị"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
+        "sign_in_with_password":
+            MessageLookupByLibrary.simpleMessage("Đăng nhập bằng mật khẩu"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "sort_by": MessageLookupByLibrary.simpleMessage("Sắp xếp bằng"),
+        "sound": MessageLookupByLibrary.simpleMessage("Âm thanh"),
+        "special_offers":
+            MessageLookupByLibrary.simpleMessage("Ưu đãi đặc biệt"),
+        "suggested": MessageLookupByLibrary.simpleMessage("Đề xuất"),
         "sunday": MessageLookupByLibrary.simpleMessage("Chủ Nhật"),
         "sunday_s": MessageLookupByLibrary.simpleMessage("CN"),
         "support": MessageLookupByLibrary.simpleMessage("Hỗ trợ"),
+        "system": MessageLookupByLibrary.simpleMessage("Hệ thống"),
         "thursday": MessageLookupByLibrary.simpleMessage("Thứ năm"),
         "thursday_s": MessageLookupByLibrary.simpleMessage("T5"),
         "times": MessageLookupByLibrary.simpleMessage("Thời gian"),
@@ -307,6 +359,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tuesday": MessageLookupByLibrary.simpleMessage("Thứ ba"),
         "tuesday_s": MessageLookupByLibrary.simpleMessage("T3"),
         "tuition_levels": MessageLookupByLibrary.simpleMessage("Mức học phí"),
+        "united_states": MessageLookupByLibrary.simpleMessage("Hoa Kỳ"),
         "unknown": MessageLookupByLibrary.simpleMessage("Không xác định"),
         "unknown_error":
             MessageLookupByLibrary.simpleMessage("Lỗi không xác định"),
@@ -316,6 +369,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "updating": MessageLookupByLibrary.simpleMessage("Đang cập nhật"),
         "verify_otp_code":
             MessageLookupByLibrary.simpleMessage("Xác nhận mã OTP"),
+        "vibrate": MessageLookupByLibrary.simpleMessage("Rung"),
+        "vietnam": MessageLookupByLibrary.simpleMessage("Viet Nam"),
         "view": MessageLookupByLibrary.simpleMessage("Xem"),
         "view_all_teacher":
             MessageLookupByLibrary.simpleMessage("Xem tất cả giáo viên"),

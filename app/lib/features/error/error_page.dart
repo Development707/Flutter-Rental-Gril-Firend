@@ -42,12 +42,14 @@ class ErrorPage extends StatelessWidget {
 
   List<Widget> _actionButton(BuildContext context) => <Widget>[
         AppOutlinedButton(
+          dense: false,
           child: Text(context.l10n.back),
           onPressed: () =>
               context.canPop() ? context.pop() : context.go(Routes.home),
         ),
-        context.gaps.h16,
+        context.gaps.h8,
         AppElevatedButton(
+          dense: false,
           child: Text(context.l10n.back_to_home),
           onPressed: () => context.go(Routes.home),
         )

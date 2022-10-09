@@ -16,14 +16,11 @@ class EmptyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Image.asset(AppImages.notFound),
-        context.gaps.h16,
-        Text(title ?? context.l10n.empty_title, style: context.typo.titleLarge),
+        Flexible(child: Image.asset(AppImages.notFound)),
         context.gaps.h4,
-        Text('$content', style: context.typo.headlineMedium),
+        Text(content ?? '', style: context.typo.headlineMedium),
       ],
     );
   }

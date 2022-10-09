@@ -27,5 +27,7 @@ export 'progress/loading_indicator.dart';
 export 'progress/loading_opacity.dart';
 export 'selection/app_checkbox.dart';
 export 'selection/app_radio.dart';
+export 'selection/app_radio_list_title.dart';
+export 'selection/app_switch.dart';
 export 'tag/status_tag.dart';
 export 'tag/toggleable_tag.dart';

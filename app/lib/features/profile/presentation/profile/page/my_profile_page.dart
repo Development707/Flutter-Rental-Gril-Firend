@@ -92,7 +92,7 @@ class MyProfilePage extends StatelessWidget {
                         primary: context.colorScheme.onSecondaryContainer,
                         child: Text(context.l10n.cancel),
                         onPressed: () {}),
-                  ].applySeparator(separator: context.gaps.h8),
+                  ].applySeparator(context.gaps.h8),
                 ),
               );
             },
@@ -124,9 +124,12 @@ class MyProfilePage extends StatelessWidget {
                         itemExtent: context.sizes.p40,
                         onSelectedItemChanged: (int selectedItem) {},
                         children: <Text>[
-                          Text('Male', style: context.typo.titleLarge),
-                          Text('Female', style: context.typo.titleLarge),
-                          Text('Other', style: context.typo.titleLarge),
+                          Text(context.l10n.male,
+                              style: context.typo.titleLarge),
+                          Text(context.l10n.female,
+                              style: context.typo.titleLarge),
+                          Text(context.l10n.other,
+                              style: context.typo.titleLarge),
                         ],
                       ),
                     ),
@@ -139,7 +142,7 @@ class MyProfilePage extends StatelessWidget {
                         primary: context.colorScheme.onSecondaryContainer,
                         child: Text(context.l10n.cancel),
                         onPressed: () {}),
-                  ].applySeparator(separator: context.gaps.h8),
+                  ].applySeparator(context.gaps.h8),
                 ),
               );
             },
@@ -169,7 +172,7 @@ class MyProfilePage extends StatelessWidget {
                 hintStyle: context.typo.labelLarge,
                 prefixIcon: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
+                  children: <Widget>[
                     Image.asset(AppImages.flagVietName,
                         width: context.sizes.p40),
                     const Icon(Icons.expand_more),
@@ -195,9 +198,12 @@ class MyProfilePage extends StatelessWidget {
                         itemExtent: context.sizes.p40,
                         onSelectedItemChanged: (int selectedItem) {},
                         children: <Text>[
-                          Text('Viet Nam', style: context.typo.titleLarge),
-                          Text('Unied States', style: context.typo.titleLarge),
-                          Text('Other', style: context.typo.titleLarge),
+                          Text(context.l10n.vietnam,
+                              style: context.typo.titleLarge),
+                          Text(context.l10n.united_states,
+                              style: context.typo.titleLarge),
+                          Text(context.l10n.other,
+                              style: context.typo.titleLarge),
                         ],
                       ),
                     ),
@@ -210,7 +216,7 @@ class MyProfilePage extends StatelessWidget {
                         primary: context.colorScheme.onSecondaryContainer,
                         child: Text(context.l10n.cancel),
                         onPressed: () {}),
-                  ].applySeparator(separator: context.gaps.h8),
+                  ].applySeparator(context.gaps.h8),
                 ),
               );
             },
@@ -226,7 +232,7 @@ class MyProfilePage extends StatelessWidget {
               suffixIcon: const Icon(Icons.expand_more),
             ),
           ),
-        ].applySeparator(separator: context.gaps.h24),
+        ].applySeparator(context.gaps.h24),
       ),
       bottomNavigationBar: Padding(
         padding: context.insets.a16,

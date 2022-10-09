@@ -10,49 +10,40 @@ class AppChoiceChip extends StatelessWidget {
     required this.onSelected,
     this.padding,
     this.avatar,
-    this.avatarBorder = const RoundedRectangleBorder(),
-    this.selectedColor,
-    this.backgroundColor = Colors.transparent,
+    this.avatarBorder,
+    this.primary,
     this.side,
   });
 
   final bool selected;
   final Widget label;
   final ValueChanged<bool>? onSelected;
-
   final EdgeInsetsGeometry? padding;
   final Widget? avatar;
-  final Color? selectedColor;
-  final Color backgroundColor;
-  final ShapeBorder avatarBorder;
+  final Color? primary;
+  final ShapeBorder? avatarBorder;
   final BorderSide? side;
 
   @override
   Widget build(BuildContext context) {
     return ChoiceChip(
-      padding: padding ?? context.insets.a12,
+      padding: padding ?? context.insets.h8,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(context.sizes.p8),
-        side: side ??
-            BorderSide(
-                color: selected
-                    ? context.colorScheme.primary
-                    : context.colorScheme.surface),
+        borderRadius: BorderRadius.circular(context.sizes.p40),
+        side: side ?? BorderSide(color: primary ?? context.colorScheme.primary),
       ),
-      elevation: selected ? 2 : 0,
+      elevation: 0,
       avatar: avatar,
-      avatarBorder: avatarBorder,
-      backgroundColor: backgroundColor,
-      selectedColor: context.colorScheme.onPrimary,
-      disabledColor: context.colorScheme.surface,
-      shadowColor: context.colorScheme.onPrimaryContainer,
-      selectedShadowColor: context.colorScheme.onPrimaryContainer,
+      selectedColor: primary ?? context.colorScheme.primary,
+      shadowColor: primary ?? context.colorScheme.primary,
+      selectedShadowColor: primary ?? context.colorScheme.primary,
       labelStyle: context.typo.labelLarge.copyWith(
           fontWeight: FontWeight.w600,
           color: selected
-              ? selectedColor ?? context.colorScheme.primary
-              : context.colorScheme.surface),
-      // required
+              ? context.colorScheme.onPrimary
+              : context.colorScheme.primary),
+
+      /// required
       label: label,
       selected: selected,
       onSelected: onSelected,

@@ -61,6 +61,7 @@ class AppIcons {
   static const String icHeartCheck = 'assets/icons/ic_heart_check.svg';
   static const String icHistory = 'assets/icons/ic_history.svg';
   static const String icInfo = 'assets/icons/ic_info.svg';
+  static const String icInstagram = 'assets/icons/ic_instagram.svg';
   static const String icLike = 'assets/icons/ic_like.svg';
   static const String icLikeBold = 'assets/icons/ic_like_bold.svg';
   static const String icLikeDislike = 'assets/icons/ic_like_dislike.svg';
@@ -117,6 +118,7 @@ class AppIcons {
   static const String icTaskSquare = 'assets/icons/ic_task_square.svg';
   static const String icTeacherBold = 'assets/icons/ic_teacher_bold.svg';
   static const String icTrash = 'assets/icons/ic_trash.svg';
+  static const String icTwitter = 'assets/icons/ic_twitter.svg';
   static const String icTicket = 'assets/icons/ic_ticket.svg';
   static const String icUpload = 'assets/icons/ic_upload.svg';
   static const String icUsers = 'assets/icons/ic_users.svg';

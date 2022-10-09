@@ -99,7 +99,7 @@ extension BottomModal on BuildContext {
           ),
         ),
         gaps.h24,
-        ...actions.applySeparator(separator: gaps.h8).toList(),
+        ...actions.applySeparator(gaps.h8).toList(),
       ],
     );
 

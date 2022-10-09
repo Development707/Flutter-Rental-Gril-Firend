@@ -13,15 +13,15 @@ class ProfileMyBookingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Tab> tabs = <Tab>[
-      const Tab(text: 'Active'),
-      const Tab(text: 'Completed'),
+      Tab(text: context.l10n.active),
+      Tab(text: context.l10n.completed),
     ];
 
     return DefaultTabController(
       length: tabs.length,
       child: Scaffold(
         appBar: CustomAppBar(
-          titleText: 'My Booking',
+          titleText: context.l10n.my_booking,
           actions: <Widget>[
             Icon(Icons.more_horiz, size: context.sizes.p32),
             context.gaps.w16,

@@ -20,7 +20,7 @@ class MyBookingItem extends StatelessWidget {
     return BaseCard(
       borderRadius: BorderRadius.circular(context.sizes.p24),
       leading: Stack(
-        children: [
+        children: <Widget>[
           RoundedRectImage(
             width: context.sizes.p96,
             height: context.sizes.p96,
@@ -59,7 +59,7 @@ class MyBookingItem extends StatelessWidget {
                 style: context.typo.titleLarge.copyWith(
                   color: context.colorScheme.primary,
                 )),
-            Text(' / 5 hours', style: context.typo.labelSmall),
+            Text(' / 5 ${context.l10n.hours}', style: context.typo.labelSmall),
             context.gaps.w8,
             Container(
                 padding: context.insets.h4,
@@ -67,26 +67,26 @@ class MyBookingItem extends StatelessWidget {
                   border: Border.all(color: context.colorScheme.primary),
                   borderRadius: BorderRadius.circular(context.sizes.p4),
                 ),
-                child: Text('Paid',
+                child: Text(context.l10n.paid,
                     style: context.typo.labelSmall.copyWith(
                       color: context.colorScheme.primary,
                     )))
           ]),
         ],
       ),
-      bottom: Column(children: [
-        Divider(),
-        Row(children: [
+      bottom: Column(children: <Widget>[
+        Divider(color: context.colorScheme.outline.withOpacity(0.3)),
+        Row(children: <Widget>[
           Expanded(
               child: AppElevatedButton(
                   borderRadius: BorderRadius.circular(context.sizes.p40),
-                  child: const Text('Detail'),
+                  child: Text(context.l10n.detail),
                   onPressed: () {})),
           context.gaps.w16,
           Expanded(
               child: AppOutlinedButton(
                   borderRadius: BorderRadius.circular(context.sizes.p40),
-                  child: const Text('Receipt'),
+                  child: Text(context.l10n.receipt),
                   onPressed: () {})),
         ])
       ]),

@@ -60,7 +60,7 @@ extension ConfirmDialog on BuildContext {
                       ),
                     ],
                   )
-                ].applySeparator(separator: gaps.h16),
+                ].applySeparator(gaps.h16),
               ),
               Positioned(
                   top: -sizes.p16,

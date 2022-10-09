@@ -15,12 +15,15 @@ class AppRadio<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Radio<T>(
-      focusColor: context.colorScheme.primary,
-      activeColor: context.colorScheme.primary,
-      value: value,
-      groupValue: groupValue,
-      onChanged: onChanged,
+    return SizedBox(
+      height: 0,
+      child: Radio<T>(
+        focusColor: context.colorScheme.primary,
+        activeColor: context.colorScheme.primary,
+        value: value,
+        groupValue: groupValue,
+        onChanged: onChanged,
+      ),
     );
   }
 }

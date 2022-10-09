@@ -33,7 +33,7 @@ extension ListExtension<T> on List<T?> {
 }
 
 extension IterableDividerExtension on Iterable<Widget> {
-  Iterable<Widget> applySeparator({required Widget separator}) {
+  Iterable<Widget> applySeparator(Widget separator) {
     return mapIndexed((int index, Widget item) => <Widget>[
           if (index != 0) separator,
           item,
@@ -42,7 +42,7 @@ extension IterableDividerExtension on Iterable<Widget> {
 }
 
 extension ListDividerExtension on List<Widget> {
-  List<Widget> applySeparator({required Widget separator}) {
+  List<Widget> applySeparator(Widget separator) {
     return mapIndexed((int index, Widget item) => <Widget>[
           if (index != 0) separator,
           item,

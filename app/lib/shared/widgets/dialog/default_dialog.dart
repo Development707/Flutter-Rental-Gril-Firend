@@ -43,11 +43,7 @@ extension DefaultDialog on BuildContext {
                   child: content,
                 ),
                 context.gaps.h24,
-                ...actions
-                    .applySeparator(
-                      separator: context.gaps.h8,
-                    )
-                    .toList(),
+                ...actions.applySeparator(context.gaps.h8).toList(),
               ],
             ),
           ),

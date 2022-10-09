@@ -107,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                         }),
                   ),
                   context.gaps.h16,
-                  Text('or', style: context.typo.titleMedium),
+                  Text(context.l10n.or, style: context.typo.titleMedium),
                   context.gaps.h16,
                   Padding(
                     padding: context.insets.h16,
@@ -118,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                         context.goRouter.go(
                             '${context.goRouter.location}/${LoginPasswordPage.routerPath}');
                       },
-                      child: const Text('Sign in with password'),
+                      child: Text(context.l10n.sign_in_with_password),
                     ),
                   ),
                   context.gaps.h32,

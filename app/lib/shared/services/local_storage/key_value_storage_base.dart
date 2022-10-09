@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/services.dart';
@@ -62,26 +63,28 @@ class KeyValueStorageBase {
   /* ------------------ HIVE STORAGE ----------------------- */
 
   /// Returns true if there is at least one entries in this box.
-  bool hasData<T extends HiveBox>() {
-    return Hive.box<HiveBox>(T.runtimeType.toString()).isNotEmpty;
+  String generateSecureKey() {
+    return base64UrlEncode(Hive.generateSecureKey());
+  }
+
+  /// Returns true if there is at least one entries in this box.
+  bool hasData<T extends HiveBox>(String boxName) {
+    return Hive.box<HiveBox>(boxName).isNotEmpty;
   }
 
   /// Returns the value associated with the given [key]. If the key does not
   /// exist, `null` is returned.
-  T? getItem<T extends HiveBox>({required dynamic key}) {
-    try {
-      final Box<T> hiveBox = Hive.box<T>(T.runtimeType.toString());
+  T? getItem<T extends HiveBox>(String boxName, {required dynamic key}) {
+    final Box<T> hiveBox = Hive.box<T>(boxName);
 
-      return hiveBox.get(key);
-    } on Exception {
-      return null;
-    }
+    return hiveBox.get(key);
   }
 
   /// Read the value for the key from common hive storage
-  Iterable<T>? getItems<T extends HiveBox>({int page = 1, int? limit}) {
+  Iterable<T>? getItems<T extends HiveBox>(String boxName,
+      {int page = 1, int? limit}) {
     try {
-      final Box<T> hiveBox = Hive.box<T>(T.runtimeType.toString());
+      final Box<T> hiveBox = Hive.box<T>(boxName);
       final int totalHiveItems = hiveBox.length;
 
       int itemCount = totalHiveItems;
@@ -104,8 +107,8 @@ class KeyValueStorageBase {
 
   /// Sets the value for the key (id) to common hive storage
   Future<void> saveItem<T extends HiveBox>(
-      {required dynamic key, dynamic value}) async {
-    final Box<dynamic> hiveBox = Hive.box<dynamic>(T.runtimeType.toString());
+      {required dynamic key, required T value}) async {
+    final Box<T> hiveBox = Hive.box<T>(value.boxName);
 
     await hiveBox.put(key, value);
   }
@@ -113,17 +116,19 @@ class KeyValueStorageBase {
   /// Saves all the [values] with id keys.
   Future<void> saveItems<T extends HiveBox>(
       {required Iterable<T> items, bool clear = true}) async {
-    final Box<dynamic> hiveBox = Hive.box<dynamic>(T.runtimeType.toString());
+    if (items.isNotEmpty) {
+      final Box<T> hiveBox = Hive.box<T>(items.first.boxName);
 
-    if (clear) {
-      await hiveBox.clear();
+      if (clear) {
+        await hiveBox.clear();
+      }
+
+      final Map<dynamic, T> itemsMap = <dynamic, T>{
+        for (T item in items) item.id: item
+      };
+
+      await hiveBox.putAll(itemsMap);
     }
-
-    final Map<dynamic, T> itemsMap = <dynamic, T>{
-      for (T item in items) item.id: item
-    };
-
-    await hiveBox.putAll(itemsMap);
   }
 
   /// Erases hive storage keys

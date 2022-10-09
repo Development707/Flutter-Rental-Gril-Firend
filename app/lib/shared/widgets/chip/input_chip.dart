@@ -17,8 +17,7 @@ class AppInputChip extends StatelessWidget {
     this.deleteIcon,
     this.avatarBorder = const RoundedRectangleBorder(),
     this.showCheckmark = false,
-    this.selectedColor,
-    this.backgroundColor = Colors.transparent,
+    this.primary,
     this.side,
   });
 
@@ -32,43 +31,35 @@ class AppInputChip extends StatelessWidget {
   final Widget? avatar;
   final Widget? deleteIcon;
   final bool showCheckmark;
-  final Color? selectedColor;
-  final Color backgroundColor;
+  final Color? primary;
   final ShapeBorder avatarBorder;
   final BorderSide? side;
 
   @override
   Widget build(BuildContext context) {
     return InputChip(
-      padding: padding ?? context.insets.a12,
+      padding: padding ?? context.insets.h8,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(context.sizes.p12),
-        side: side ??
-            BorderSide(
-                color: selected
-                    ? context.colorScheme.primary
-                    : context.colorScheme.surface),
+        borderRadius: BorderRadius.circular(context.sizes.p40),
+        side: side ?? BorderSide(color: primary ?? context.colorScheme.primary),
       ),
-      elevation: selected ? 2 : 0,
+      elevation: 0,
       showCheckmark: showCheckmark,
       avatar: avatar,
-      avatarBorder: avatarBorder,
-      backgroundColor: backgroundColor,
-      selectedColor: context.colorScheme.onPrimary,
-      disabledColor: context.colorScheme.surface,
-      shadowColor: context.colorScheme.onPrimaryContainer,
-      selectedShadowColor: context.colorScheme.onPrimaryContainer,
-      checkmarkColor: selectedColor ?? context.colorScheme.primary,
+      selectedColor: primary ?? context.colorScheme.primary,
+      shadowColor: primary ?? context.colorScheme.primary,
+      selectedShadowColor: primary ?? context.colorScheme.primary,
+      checkmarkColor: context.colorScheme.onPrimary,
       labelStyle: context.typo.labelLarge.copyWith(
           fontWeight: FontWeight.w600,
           color: selected
-              ? selectedColor ?? context.colorScheme.primary
-              : context.colorScheme.surface),
+              ? context.colorScheme.onPrimary
+              : context.colorScheme.primary),
       deleteIcon: deleteIcon ??
           AppIcon(AppIcons.icCloseCircle,
               color: selected
-                  ? selectedColor ?? context.colorScheme.primary
-                  : context.colorScheme.surface),
+                  ? context.colorScheme.onPrimary
+                  : context.colorScheme.primary),
       // required
       label: label,
       selected: selected,

@@ -35,18 +35,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Account": MessageLookupByLibrary.simpleMessage("Account"),
         "accept": MessageLookupByLibrary.simpleMessage("Accept"),
         "account": MessageLookupByLibrary.simpleMessage("Account"),
         "account_info":
             MessageLookupByLibrary.simpleMessage("Account infomation"),
         "achievement": MessageLookupByLibrary.simpleMessage("Achievement"),
+        "active": MessageLookupByLibrary.simpleMessage("Active"),
         "add": MessageLookupByLibrary.simpleMessage("Add"),
+        "add_new_payments":
+            MessageLookupByLibrary.simpleMessage("Add new Payments"),
         "add_voucher": MessageLookupByLibrary.simpleMessage("Add voucher"),
         "add_your_goal": MessageLookupByLibrary.simpleMessage("Add your goal"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "afternoon": MessageLookupByLibrary.simpleMessage("Afternoon"),
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
+        "app_update": MessageLookupByLibrary.simpleMessage("App Update"),
         "apply": MessageLookupByLibrary.simpleMessage("Apply"),
         "april": MessageLookupByLibrary.simpleMessage("April"),
         "april_s": MessageLookupByLibrary.simpleMessage("Apr"),
@@ -55,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "back_to_home": MessageLookupByLibrary.simpleMessage("Back to home"),
         "begin": MessageLookupByLibrary.simpleMessage("Begin"),
+        "biometric_id": MessageLookupByLibrary.simpleMessage("Biometric ID"),
         "birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
         "can_not_open": MessageLookupByLibrary.simpleMessage("Can not open"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -65,12 +71,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel_selected":
             MessageLookupByLibrary.simpleMessage("Cancel selected"),
         "cancelled": MessageLookupByLibrary.simpleMessage("Cancelled"),
+        "cashback": MessageLookupByLibrary.simpleMessage("Cashback"),
         "change_calendar":
             MessageLookupByLibrary.simpleMessage("Change calendar"),
         "change_password":
             MessageLookupByLibrary.simpleMessage("Change password"),
         "change_password_successfully": MessageLookupByLibrary.simpleMessage(
             "Change password successfully"),
+        "change_pin": MessageLookupByLibrary.simpleMessage("Change PIN"),
         "choose_date": MessageLookupByLibrary.simpleMessage("Choose date"),
         "choose_gender":
             MessageLookupByLibrary.simpleMessage("Please choose gender"),
@@ -95,14 +103,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm voucher"),
         "confirm_your_request":
             MessageLookupByLibrary.simpleMessage("Confirm your request"),
+        "connected": MessageLookupByLibrary.simpleMessage("Connected"),
         "connection_error":
             MessageLookupByLibrary.simpleMessage("Connection errors"),
         "connection_lost":
             MessageLookupByLibrary.simpleMessage("No network connection"),
+        "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Create new account"),
         "create_profile":
             MessageLookupByLibrary.simpleMessage("Create a profile"),
+        "customer_service":
+            MessageLookupByLibrary.simpleMessage("Customer Service"),
+        "dark": MessageLookupByLibrary.simpleMessage("Dark"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("Dark mode"),
         "day_started": MessageLookupByLibrary.simpleMessage("Day started"),
         "days": MessageLookupByLibrary.simpleMessage("days"),
         "days_relative": m0,
@@ -119,9 +133,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "done": MessageLookupByLibrary.simpleMessage("Done"),
         "dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_or_phone_number":
             MessageLookupByLibrary.simpleMessage("Email or Phone number"),
         "empty_title": MessageLookupByLibrary.simpleMessage("Title empty"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "enter_sent_otp": MessageLookupByLibrary.simpleMessage("Enter the OTP"),
         "enter_value": m2,
         "enter_your_new_password":
@@ -143,6 +159,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
+        "frequently_asked_questions":
+            MessageLookupByLibrary.simpleMessage("FAQ"),
         "friday": MessageLookupByLibrary.simpleMessage("Friday"),
         "friday_s": MessageLookupByLibrary.simpleMessage("FR"),
         "friend_referral":
@@ -150,7 +168,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "full": MessageLookupByLibrary.simpleMessage("Full"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full name"),
         "gender": MessageLookupByLibrary.simpleMessage("Gender"),
+        "general": MessageLookupByLibrary.simpleMessage("General"),
+        "general_notification":
+            MessageLookupByLibrary.simpleMessage("General notification"),
         "get_now": MessageLookupByLibrary.simpleMessage("Get now"),
+        "google_authentication":
+            MessageLookupByLibrary.simpleMessage("Google Authentication"),
         "hello": MessageLookupByLibrary.simpleMessage("Hello"),
         "hello_someone": m3,
         "help_center": MessageLookupByLibrary.simpleMessage("Help center"),
@@ -159,10 +182,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "hours": MessageLookupByLibrary.simpleMessage("hours"),
         "hours_relative": m4,
         "i_got_it": MessageLookupByLibrary.simpleMessage("I got it"),
+        "internet_connected":
+            MessageLookupByLibrary.simpleMessage("Internet Connected"),
+        "internet_lost": MessageLookupByLibrary.simpleMessage("Internet Lost"),
         "invalid_format_or_value_error": MessageLookupByLibrary.simpleMessage(
             "Request cancelled prematurely"),
+        "invite": MessageLookupByLibrary.simpleMessage("Invite"),
+        "invite_firend": MessageLookupByLibrary.simpleMessage("Invite firends"),
         "june": MessageLookupByLibrary.simpleMessage("June"),
         "june_s": MessageLookupByLibrary.simpleMessage("Jun"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastest_reviews":
             MessageLookupByLibrary.simpleMessage("Latest reviews"),
         "late_night": MessageLookupByLibrary.simpleMessage("Late night"),
@@ -173,6 +202,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "learnt": MessageLookupByLibrary.simpleMessage("Learnt"),
         "lession": MessageLookupByLibrary.simpleMessage("Lession"),
         "let_go": MessageLookupByLibrary.simpleMessage("Let\'s go"),
+        "light": MessageLookupByLibrary.simpleMessage("Light"),
         "list_videos": MessageLookupByLibrary.simpleMessage("List videos"),
         "log_in": MessageLookupByLibrary.simpleMessage("Login"),
         "log_out": MessageLookupByLibrary.simpleMessage("Logout"),
@@ -184,6 +214,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Incorrect username or password"),
         "login_to_continue":
             MessageLookupByLibrary.simpleMessage("Login to continue"),
+        "login_to_your_account":
+            MessageLookupByLibrary.simpleMessage("Login to Your Account"),
         "main_course": MessageLookupByLibrary.simpleMessage("Main Course"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "march": MessageLookupByLibrary.simpleMessage("March"),
@@ -203,8 +235,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "months": MessageLookupByLibrary.simpleMessage("months"),
         "more": MessageLookupByLibrary.simpleMessage("More"),
         "morning": MessageLookupByLibrary.simpleMessage("Morning"),
+        "my_booking": MessageLookupByLibrary.simpleMessage("My booking"),
         "nationality": MessageLookupByLibrary.simpleMessage("Nationality"),
         "new_password": MessageLookupByLibrary.simpleMessage("New password"),
+        "new_service_available":
+            MessageLookupByLibrary.simpleMessage("New Service available"),
+        "new_tip_available":
+            MessageLookupByLibrary.simpleMessage("New Tip Available"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "night": MessageLookupByLibrary.simpleMessage("Night"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
@@ -230,16 +267,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "other_error": MessageLookupByLibrary.simpleMessage("Other error"),
         "other_reason": MessageLookupByLibrary.simpleMessage("Other reason"),
         "overview": MessageLookupByLibrary.simpleMessage("Overview"),
+        "paid": MessageLookupByLibrary.simpleMessage("Paid"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "payments": MessageLookupByLibrary.simpleMessage("Payments"),
         "pending": MessageLookupByLibrary.simpleMessage("Pending"),
         "phone_number": MessageLookupByLibrary.simpleMessage("Phone number"),
         "pick": MessageLookupByLibrary.simpleMessage("pick"),
         "picked": MessageLookupByLibrary.simpleMessage("Picked"),
         "present": MessageLookupByLibrary.simpleMessage("Now"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "promo_and_discount":
+            MessageLookupByLibrary.simpleMessage("Promo & Discount"),
         "promo_gift": MessageLookupByLibrary.simpleMessage("Ưu đãi đổi quà"),
         "quick_join": MessageLookupByLibrary.simpleMessage("Quick join"),
         "reason": MessageLookupByLibrary.simpleMessage("Reason"),
+        "receipt": MessageLookupByLibrary.simpleMessage("Receipt"),
         "receive": MessageLookupByLibrary.simpleMessage("Receive"),
         "referral": MessageLookupByLibrary.simpleMessage("Referral"),
         "regions": MessageLookupByLibrary.simpleMessage("Regions"),
@@ -248,6 +290,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Register duration"),
         "reject": MessageLookupByLibrary.simpleMessage("Reject"),
         "rejected": MessageLookupByLibrary.simpleMessage("Rejected"),
+        "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "remove_seleted":
             MessageLookupByLibrary.simpleMessage("Remove selected"),
         "request": MessageLookupByLibrary.simpleMessage("Request"),
@@ -268,6 +311,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saturday_s": MessageLookupByLibrary.simpleMessage("SA"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "security": MessageLookupByLibrary.simpleMessage("Security"),
         "see_more": MessageLookupByLibrary.simpleMessage("See more"),
         "select_all": MessageLookupByLibrary.simpleMessage("Select all"),
         "selected": MessageLookupByLibrary.simpleMessage("Selected"),
@@ -276,6 +320,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "september": MessageLookupByLibrary.simpleMessage("September"),
         "september_s": MessageLookupByLibrary.simpleMessage("Sep"),
         "serrver_error": MessageLookupByLibrary.simpleMessage("Serrver error"),
+        "service": MessageLookupByLibrary.simpleMessage("Service"),
         "service_feedback":
             MessageLookupByLibrary.simpleMessage("Service feedback"),
         "session": MessageLookupByLibrary.simpleMessage("Session"),
@@ -285,12 +330,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "session_video": MessageLookupByLibrary.simpleMessage("Video session"),
         "show": MessageLookupByLibrary.simpleMessage("Show"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign In"),
+        "sign_in_with_password":
+            MessageLookupByLibrary.simpleMessage("Sign in with password"),
         "sign_out": MessageLookupByLibrary.simpleMessage("Sign Out"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "sort_by": MessageLookupByLibrary.simpleMessage("Sort by"),
+        "sound": MessageLookupByLibrary.simpleMessage("Sound"),
+        "special_offers":
+            MessageLookupByLibrary.simpleMessage("Special Offers"),
+        "suggested": MessageLookupByLibrary.simpleMessage("Suggested"),
         "sunday": MessageLookupByLibrary.simpleMessage("Sunday"),
         "sunday_s": MessageLookupByLibrary.simpleMessage("SU"),
         "support": MessageLookupByLibrary.simpleMessage("Support"),
+        "system": MessageLookupByLibrary.simpleMessage("System"),
         "thursday": MessageLookupByLibrary.simpleMessage("Thursday"),
         "thursday_s": MessageLookupByLibrary.simpleMessage("TH"),
         "times": MessageLookupByLibrary.simpleMessage("Times"),
@@ -313,6 +365,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tuesday_s": MessageLookupByLibrary.simpleMessage("TU"),
         "tuition_levels":
             MessageLookupByLibrary.simpleMessage("The tuition levels"),
+        "united_states": MessageLookupByLibrary.simpleMessage("United States"),
         "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
         "unknown_error": MessageLookupByLibrary.simpleMessage("Unknown error"),
         "up_coming": MessageLookupByLibrary.simpleMessage("Upcoming"),
@@ -321,6 +374,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "updating": MessageLookupByLibrary.simpleMessage("Updating"),
         "verify_otp_code":
             MessageLookupByLibrary.simpleMessage("Verify OTP code"),
+        "vibrate": MessageLookupByLibrary.simpleMessage("Vibrate"),
+        "vietnam": MessageLookupByLibrary.simpleMessage("Vietnam"),
         "view": MessageLookupByLibrary.simpleMessage("View"),
         "view_all_teacher":
             MessageLookupByLibrary.simpleMessage("View All Teacher"),

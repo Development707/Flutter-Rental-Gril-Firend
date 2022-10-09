@@ -18,7 +18,7 @@ class PaymentsItem extends StatelessWidget {
     return BaseCard(
       leading: icon,
       content: Text(title, style: context.typo.titleLarge.weight600),
-      trailing: Text('Connected',
+      trailing: Text(context.l10n.connected,
           style: context.typo.titleMedium.weight500.copyWith(
             color: context.colorScheme.primary,
           )),

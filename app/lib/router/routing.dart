@@ -7,11 +7,13 @@ import '../features/authentication/authentication.dart';
 import '../features/chat/chat.dart';
 import '../features/error/error_page.dart';
 import '../features/favorite/favorite.dart';
+import '../features/help_center/help_center.dart';
 import '../features/home/home.dart';
 import '../features/notification/notification.dart';
 import '../features/profile/profile.dart';
 import '../features/rental/rental.dart';
 import '../features/search/search.dart';
+import '../features/settings/settings.dart';
 import 'router.dart';
 import 'transition_page.dart';
 
@@ -129,6 +131,7 @@ class Routing {
     ),
     GoRoute(
       path: ProfilePaymentsPage.routerPath,
+      parentNavigatorKey: navigatorKey,
       pageBuilder: (_, __) =>
           const CupertinoTransitionPage(child: ProfilePaymentsPage()),
     ),
@@ -139,10 +142,38 @@ class Routing {
           const CupertinoTransitionPage(child: MyProfilePage()),
     ),
     GoRoute(
+      path: ProfileImviteFriendPage.routerPath,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: ProfileImviteFriendPage()),
+    ),
+    GoRoute(
       path: NotificationPage.routerPath,
       parentNavigatorKey: navigatorKey,
       pageBuilder: (_, __) =>
           const CupertinoTransitionPage(child: NotificationPage()),
+    ),
+    GoRoute(
+      path: SettingSecurityPage.routerPath,
+      parentNavigatorKey: navigatorKey,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: SettingSecurityPage()),
+    ),
+    GoRoute(
+      path: SettingLanguagePage.routerPath,
+      parentNavigatorKey: navigatorKey,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: SettingLanguagePage()),
+    ),
+    GoRoute(
+      path: SettingThemeModePage.routerPath,
+      parentNavigatorKey: navigatorKey,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: SettingThemeModePage()),
+    ),
+    GoRoute(
+      path: HelpCenterPage.routerPath,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: HelpCenterPage()),
     ),
   ];
 }

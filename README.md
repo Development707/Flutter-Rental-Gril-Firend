@@ -30,17 +30,20 @@ Rental Girl Friend is an app made with **Flutter** framework to provide online r
 
 ### 9. Profile
 
-|            Profile Screen            |            My Booking Screen            |            Payments Screen            |            My Profile Screen            |
-| :----------------------------------: | :-------------------------------------: | :-----------------------------------: | :-------------------------------------: |
-|    ![](./docs/readme/profile.jpg)    |    ![](./docs/readme/my_booking.jpg)    |    ![](./docs/readme/payments.jpg)    |    ![](./docs/readme/my_profile.jpg)    |
-| ![](./docs/readme/profile_light.jpg) | ![](./docs/readme/my_booking_light.jpg) | ![](./docs/readme/payments_light.jpg) | ![](./docs/readme/my_profile_light.jpg) |
+|              Profile Screen               |             My Booking Screen              |              Payments Screen               |            My Profile Screen            |
+| :---------------------------------------: | :----------------------------------------: | :----------------------------------------: | :-------------------------------------: |
+|      ![](./docs/readme/profile.jpg)       |     ![](./docs/readme/my_booking.jpg)      |      ![](./docs/readme/payments.jpg)       |    ![](./docs/readme/my_profile.jpg)    |
+|   ![](./docs/readme/profile_light.jpg)    |  ![](./docs/readme/my_booking_light.jpg)   |   ![](./docs/readme/payments_light.jpg)    | ![](./docs/readme/my_profile_light.jpg) |
+|            Notification Screen            |              Security Screen               |              Language Screen               |            Dark Mode Screen             |
+|    ![](./docs/readme/notification.jpg)    |      ![](./docs/readme/security.jpg)       |      ![](./docs/readme/language.jpg)       |    ![](./docs/readme/dark_mode.jpg)     |
+| ![](./docs/readme/notification_light.jpg) |   ![](./docs/readme/security_light.jpg)    |   ![](./docs/readme/language_light.jpg)    | ![](./docs/readme/dark_mode_light.jpg)  |
+|            Help Center Screen             |             Help Center Screen             |            Invite Friend Screen            |              Logout Screen              |
+|    ![](./docs/readme/help_center.jpg)     |    ![](./docs/readme/help_center_2.jpg)    |    ![](./docs/readme/invite_friend.jpg)    |      ![](./docs/readme/logout.jpg)      |
+| ![](./docs/readme/help_center_light.jpg)  | ![](./docs/readme/help_center_2_light.jpg) | ![](./docs/readme/invite_friend_light.jpg) |   ![](./docs/readme/logout_light.jpg)   |
 
 ## ⭐ Future Features
 
--   Facial Authentication.
--   Cancelling Bookings.
--   Movie Reviews.
--   FAQ page.
+-   Pending
 
 _Feel free to fork and contribute to include these features._ ❤︎
 

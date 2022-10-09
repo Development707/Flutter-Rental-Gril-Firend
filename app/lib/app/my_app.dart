@@ -55,14 +55,12 @@ class _AppViewState extends State<AppView> {
             return BlocListener<AppConnectCubit, AppConnectState>(
               listener: (BuildContext context2, AppConnectState state) {
                 state.when(connected: () {
-                  context.scaffoldMessenger.showSnackBar(const SnackBar(
-                    key: Key('Internet Connected'),
-                    content: Text('Internet Connected'),
+                  context.scaffoldMessenger.showSnackBar(SnackBar(
+                    content: Text(context.l10n.internet_connected),
                   ));
                 }, disconnected: () {
-                  context.scaffoldMessenger.showSnackBar(const SnackBar(
-                    key: Key('Internet Lost'),
-                    content: Text('Internet Lost'),
+                  context.scaffoldMessenger.showSnackBar(SnackBar(
+                    content: Text(context.l10n.internet_lost),
                   ));
                 });
               },

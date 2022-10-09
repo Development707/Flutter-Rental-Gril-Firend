@@ -14,7 +14,7 @@ class ProfilePaymentsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        titleText: 'Payments',
+        titleText: context.l10n.payments,
         actions: <Widget>[
           Icon(Icons.qr_code_scanner, size: context.sizes.p32),
           context.gaps.w16,
@@ -52,7 +52,7 @@ class ProfilePaymentsPage extends StatelessWidget {
               icon: AppIcon(AppIcons.icMasterCard),
               title: '**** ***** ***** 9999',
             ),
-          ].applySeparator(separator: context.gaps.h16),
+          ].applySeparator(context.gaps.h16),
         ),
       ),
       bottomNavigationBar: Padding(
@@ -61,7 +61,7 @@ class ProfilePaymentsPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(context.sizes.p40),
           dense: false,
           onPressed: () {},
-          child: const Text('Add new Payments'),
+          child: Text(context.l10n.add_new_payments),
         ),
       ),
     );

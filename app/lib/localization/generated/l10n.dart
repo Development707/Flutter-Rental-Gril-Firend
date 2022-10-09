@@ -50,6 +50,16 @@ class AppLanguage {
     return Localizations.of<AppLanguage>(context, AppLanguage);
   }
 
+  /// `Tài khoản`
+  String get Account {
+    return Intl.message(
+      'Tài khoản',
+      name: 'Account',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Chấp nhận`
   String get accept {
     return Intl.message(
@@ -90,11 +100,31 @@ class AppLanguage {
     );
   }
 
+  /// `Hoạt động`
+  String get active {
+    return Intl.message(
+      'Hoạt động',
+      name: 'active',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Thêm`
   String get add {
     return Intl.message(
       'Thêm',
       name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thêm thanh toán mới`
+  String get add_new_payments {
+    return Intl.message(
+      'Thêm thanh toán mới',
+      name: 'add_new_payments',
       desc: '',
       args: [],
     );
@@ -155,6 +185,16 @@ class AppLanguage {
     return Intl.message(
       'Tất cả',
       name: 'all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cập nhật ứng dụng`
+  String get app_update {
+    return Intl.message(
+      'Cập nhật ứng dụng',
+      name: 'app_update',
       desc: '',
       args: [],
     );
@@ -240,6 +280,16 @@ class AppLanguage {
     );
   }
 
+  /// `Sinh trắc học`
+  String get biometric_id {
+    return Intl.message(
+      'Sinh trắc học',
+      name: 'biometric_id',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Ngày sinh`
   String get birthday {
     return Intl.message(
@@ -310,6 +360,16 @@ class AppLanguage {
     );
   }
 
+  /// `Hoàn lại tiền`
+  String get cashback {
+    return Intl.message(
+      'Hoàn lại tiền',
+      name: 'cashback',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Đổi lịch`
   String get change_calendar {
     return Intl.message(
@@ -335,6 +395,16 @@ class AppLanguage {
     return Intl.message(
       'Thay đổi mật khẩu thành công',
       name: 'change_password_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thay đổi pin`
+  String get change_pin {
+    return Intl.message(
+      'Thay đổi pin',
+      name: 'change_pin',
       desc: '',
       args: [],
     );
@@ -510,6 +580,16 @@ class AppLanguage {
     );
   }
 
+  /// `Đã kết nối`
+  String get connected {
+    return Intl.message(
+      'Đã kết nối',
+      name: 'connected',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Lỗi kết nối`
   String get connection_error {
     return Intl.message(
@@ -530,6 +610,16 @@ class AppLanguage {
     );
   }
 
+  /// `Liên hệ chúng tôi`
+  String get contact_us {
+    return Intl.message(
+      'Liên hệ chúng tôi',
+      name: 'contact_us',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tạo tài khoản`
   String get create_an_account {
     return Intl.message(
@@ -545,6 +635,36 @@ class AppLanguage {
     return Intl.message(
       'Tạo hồ sơ',
       name: 'create_profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dịch vụ chăm sóc khách hàng`
+  String get customer_service {
+    return Intl.message(
+      'Dịch vụ chăm sóc khách hàng',
+      name: 'customer_service',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tối`
+  String get dark {
+    return Intl.message(
+      'Tối',
+      name: 'dark',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chế độ tối`
+  String get dark_mode {
+    return Intl.message(
+      'Chế độ tối',
+      name: 'dark_mode',
       desc: '',
       args: [],
     );
@@ -690,6 +810,16 @@ class AppLanguage {
     );
   }
 
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Email hoặc số điện thoại`
   String get email_or_phone_number {
     return Intl.message(
@@ -705,6 +835,16 @@ class AppLanguage {
     return Intl.message(
       'Tiêu đề rỗng',
       name: 'empty_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tiếng Anh`
+  String get english {
+    return Intl.message(
+      'Tiếng Anh',
+      name: 'english',
       desc: '',
       args: [],
     );
@@ -860,6 +1000,16 @@ class AppLanguage {
     );
   }
 
+  /// `Câu hỏi thường gặp`
+  String get frequently_asked_questions {
+    return Intl.message(
+      'Câu hỏi thường gặp',
+      name: 'frequently_asked_questions',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Thứ sáu`
   String get friday {
     return Intl.message(
@@ -920,11 +1070,41 @@ class AppLanguage {
     );
   }
 
+  /// `Chung`
+  String get general {
+    return Intl.message(
+      'Chung',
+      name: 'general',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thông báo chung`
+  String get general_notification {
+    return Intl.message(
+      'Thông báo chung',
+      name: 'general_notification',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Nhận ngay`
   String get get_now {
     return Intl.message(
       'Nhận ngay',
       name: 'get_now',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Xác thực Google`
+  String get google_authentication {
+    return Intl.message(
+      'Xác thực Google',
+      name: 'google_authentication',
       desc: '',
       args: [],
     );
@@ -1010,11 +1190,51 @@ class AppLanguage {
     );
   }
 
+  /// `Kết nối Internet`
+  String get internet_connected {
+    return Intl.message(
+      'Kết nối Internet',
+      name: 'internet_connected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mất Internet`
+  String get internet_lost {
+    return Intl.message(
+      'Mất Internet',
+      name: 'internet_lost',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Yêu cầu bị hủy sớm`
   String get invalid_format_or_value_error {
     return Intl.message(
       'Yêu cầu bị hủy sớm',
       name: 'invalid_format_or_value_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mời`
+  String get invite {
+    return Intl.message(
+      'Mời',
+      name: 'invite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mời bạn bè`
+  String get invite_firend {
+    return Intl.message(
+      'Mời bạn bè',
+      name: 'invite_firend',
       desc: '',
       args: [],
     );
@@ -1035,6 +1255,16 @@ class AppLanguage {
     return Intl.message(
       'Jun',
       name: 'june_s',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ngôn ngữ`
+  String get language {
+    return Intl.message(
+      'Ngôn ngữ',
+      name: 'language',
       desc: '',
       args: [],
     );
@@ -1120,6 +1350,16 @@ class AppLanguage {
     );
   }
 
+  /// `Sáng`
+  String get light {
+    return Intl.message(
+      'Sáng',
+      name: 'light',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Danh sách videos`
   String get list_videos {
     return Intl.message(
@@ -1185,6 +1425,16 @@ class AppLanguage {
     return Intl.message(
       'Đăng nhập để tiếp tục',
       name: 'login_to_continue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Đăng nhập vào tài khoản của bạn`
+  String get login_to_your_account {
+    return Intl.message(
+      'Đăng nhập vào tài khoản của bạn',
+      name: 'login_to_your_account',
       desc: '',
       args: [],
     );
@@ -1370,6 +1620,16 @@ class AppLanguage {
     );
   }
 
+  /// `Đặt chỗ của tôi`
+  String get my_booking {
+    return Intl.message(
+      'Đặt chỗ của tôi',
+      name: 'my_booking',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Quốc tịch`
   String get nationality {
     return Intl.message(
@@ -1385,6 +1645,26 @@ class AppLanguage {
     return Intl.message(
       'Mật khẩu mới',
       name: 'new_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dịch vụ mới có sẵn`
+  String get new_service_available {
+    return Intl.message(
+      'Dịch vụ mới có sẵn',
+      name: 'new_service_available',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mẹo mới có sẵn`
+  String get new_tip_available {
+    return Intl.message(
+      'Mẹo mới có sẵn',
+      name: 'new_tip_available',
       desc: '',
       args: [],
     );
@@ -1620,11 +1900,31 @@ class AppLanguage {
     );
   }
 
+  /// `Trả`
+  String get paid {
+    return Intl.message(
+      'Trả',
+      name: 'paid',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Mật khẩu`
   String get password {
     return Intl.message(
       'Mật khẩu',
       name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thanh toán`
+  String get payments {
+    return Intl.message(
+      'Thanh toán',
+      name: 'payments',
       desc: '',
       args: [],
     );
@@ -1690,6 +1990,16 @@ class AppLanguage {
     );
   }
 
+  /// `Khuyến mại & Giảm giá`
+  String get promo_and_discount {
+    return Intl.message(
+      'Khuyến mại & Giảm giá',
+      name: 'promo_and_discount',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Ưu đãi đổi quà`
   String get promo_gift {
     return Intl.message(
@@ -1715,6 +2025,16 @@ class AppLanguage {
     return Intl.message(
       'Lý do',
       name: 'reason',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Biên nhận`
+  String get receipt {
+    return Intl.message(
+      'Biên nhận',
+      name: 'receipt',
       desc: '',
       args: [],
     );
@@ -1785,6 +2105,16 @@ class AppLanguage {
     return Intl.message(
       'Đã',
       name: 'rejected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nhớ tài khoản`
+  String get remember_me {
+    return Intl.message(
+      'Nhớ tài khoản',
+      name: 'remember_me',
       desc: '',
       args: [],
     );
@@ -1930,6 +2260,16 @@ class AppLanguage {
     );
   }
 
+  /// `Bảo mật`
+  String get security {
+    return Intl.message(
+      'Bảo mật',
+      name: 'security',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Xem thêm`
   String get see_more {
     return Intl.message(
@@ -2010,6 +2350,16 @@ class AppLanguage {
     );
   }
 
+  /// `Dịch vụ`
+  String get service {
+    return Intl.message(
+      'Dịch vụ',
+      name: 'service',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Phản hồi dịch vụ`
   String get service_feedback {
     return Intl.message(
@@ -2080,6 +2430,16 @@ class AppLanguage {
     );
   }
 
+  /// `Đăng nhập bằng mật khẩu`
+  String get sign_in_with_password {
+    return Intl.message(
+      'Đăng nhập bằng mật khẩu',
+      name: 'sign_in_with_password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Đăng xuất`
   String get sign_out {
     return Intl.message(
@@ -2110,6 +2470,36 @@ class AppLanguage {
     );
   }
 
+  /// `Âm thanh`
+  String get sound {
+    return Intl.message(
+      'Âm thanh',
+      name: 'sound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ưu đãi đặc biệt`
+  String get special_offers {
+    return Intl.message(
+      'Ưu đãi đặc biệt',
+      name: 'special_offers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Đề xuất`
+  String get suggested {
+    return Intl.message(
+      'Đề xuất',
+      name: 'suggested',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Chủ Nhật`
   String get sunday {
     return Intl.message(
@@ -2135,6 +2525,16 @@ class AppLanguage {
     return Intl.message(
       'Hỗ trợ',
       name: 'support',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hệ thống`
+  String get system {
+    return Intl.message(
+      'Hệ thống',
+      name: 'system',
       desc: '',
       args: [],
     );
@@ -2330,6 +2730,16 @@ class AppLanguage {
     );
   }
 
+  /// `Hoa Kỳ`
+  String get united_states {
+    return Intl.message(
+      'Hoa Kỳ',
+      name: 'united_states',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Không xác định`
   String get unknown {
     return Intl.message(
@@ -2395,6 +2805,26 @@ class AppLanguage {
     return Intl.message(
       'Xác nhận mã OTP',
       name: 'verify_otp_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rung`
+  String get vibrate {
+    return Intl.message(
+      'Rung',
+      name: 'vibrate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Viet Nam`
+  String get vietnam {
+    return Intl.message(
+      'Viet Nam',
+      name: 'vietnam',
       desc: '',
       args: [],
     );

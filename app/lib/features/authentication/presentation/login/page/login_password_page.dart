@@ -45,7 +45,7 @@ class _LoginPasswordPageState extends State<LoginPasswordPage> {
                 children: <Widget>[
                   Flexible(child: Image.asset(AppImages.login)),
                   context.gaps.h24,
-                  Text('Login to Your Account',
+                  Text(context.l10n.login_to_your_account,
                       style: context.typo.headlineMedium.weight600),
                   context.gaps.h32,
                   Padding(
@@ -60,7 +60,7 @@ class _LoginPasswordPageState extends State<LoginPasswordPage> {
                         filled: true,
                         fillColor: context.colorScheme.primary.withOpacity(0.1),
                         prefixIcon: const Icon(Icons.mail),
-                        label: const Text('Email'),
+                        label: Text(context.l10n.email),
                         labelStyle: context.typo.titleMedium,
                       ),
                     ),
@@ -81,7 +81,7 @@ class _LoginPasswordPageState extends State<LoginPasswordPage> {
                         filled: true,
                         fillColor: context.colorScheme.primary.withOpacity(0.1),
                         prefixIcon: const Icon(Icons.lock),
-                        label: const Text('Password'),
+                        label: Text(context.l10n.password),
                         labelStyle: context.typo.titleMedium,
                         suffixIcon: const Icon(Icons.visibility_off),
                       ),
@@ -92,7 +92,8 @@ class _LoginPasswordPageState extends State<LoginPasswordPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         AppCheckbox(value: false, onChanged: (_) {}),
-                        Text('Remember me', style: context.typo.titleSmall)
+                        Text(context.l10n.remember_me,
+                            style: context.typo.titleSmall)
                       ]),
                   context.gaps.h4,
                   Padding(
@@ -103,14 +104,15 @@ class _LoginPasswordPageState extends State<LoginPasswordPage> {
                       onPressed: () {
                         context.read<LoginCubit>().login();
                       },
-                      child: const Text('Sign in'),
+                      child: Text(context.l10n.sign_in),
                     ),
                   ),
                   Divider(
+                    thickness: 1.2,
+                    color: context.colorScheme.outline.withOpacity(0.3),
                     indent: context.sizes.p32,
                     endIndent: context.sizes.p32,
                     height: context.sizes.p64,
-                    thickness: 1.2,
                   ),
                   Padding(
                     padding: context.insets.h24,

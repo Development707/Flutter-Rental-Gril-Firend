@@ -23,7 +23,7 @@ class ThemeDataContainer {
       useMaterial3: true,
       colorScheme: colorScheme,
       textTheme: textTheme,
-    );
+    ).copyWith(dividerColor: Colors.transparent);
   }
 
   ThemeData darkTheme() {
@@ -34,6 +34,6 @@ class ThemeDataContainer {
       useMaterial3: true,
       colorScheme: colorScheme,
       textTheme: textTheme,
-    );
+    ).copyWith(dividerColor: Colors.transparent);
   }
 }
