@@ -28,6 +28,11 @@ Rental Girl Friend is an app made with **Flutter** framework to provide online r
 
 ### 8. Chat
 
+|            Chat Screen            |            Chat Detail Screen            |              Attach Screen               |
+| :-------------------------------: | :--------------------------------------: | :--------------------------------------: |
+|    ![](./docs/readme/chat.jpg)    |    ![](./docs/readme/chat_detail.jpg)    |    ![](./docs/readme/chat_attach.jpg)    |
+| ![](./docs/readme/chat_light.jpg) | ![](./docs/readme/chat_detail_light.jpg) | ![](./docs/readme/chat_attach_light.jpg) |
+
 ### 9. Profile
 
 |              Profile Screen               |             My Booking Screen              |              Payments Screen               |            My Profile Screen            |

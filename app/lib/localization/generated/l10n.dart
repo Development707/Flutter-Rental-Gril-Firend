@@ -230,6 +230,16 @@ class AppLanguage {
     );
   }
 
+  /// `Âm thanh`
+  String get audio {
+    return Intl.message(
+      'Âm thanh',
+      name: 'audio',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tháng 8`
   String get august {
     return Intl.message(
@@ -295,6 +305,26 @@ class AppLanguage {
     return Intl.message(
       'Ngày sinh',
       name: 'birthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cuộc gọi`
+  String get calls {
+    return Intl.message(
+      'Cuộc gọi',
+      name: 'calls',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Máy ảnh`
+  String get camera {
+    return Intl.message(
+      'Máy ảnh',
+      name: 'camera',
       desc: '',
       args: [],
     );
@@ -405,6 +435,16 @@ class AppLanguage {
     return Intl.message(
       'Thay đổi pin',
       name: 'change_pin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Trò chuyện`
+  String get chats {
+    return Intl.message(
+      'Trò chuyện',
+      name: 'chats',
       desc: '',
       args: [],
     );
@@ -620,6 +660,16 @@ class AppLanguage {
     );
   }
 
+  /// `Liên lạc`
+  String get contacts {
+    return Intl.message(
+      'Liên lạc',
+      name: 'contacts',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tạo tài khoản`
   String get create_an_account {
     return Intl.message(
@@ -785,6 +835,16 @@ class AppLanguage {
     return Intl.message(
       'Không có',
       name: 'do_not_have',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tài liệu`
+  String get document {
+    return Intl.message(
+      'Tài liệu',
+      name: 'document',
       desc: '',
       args: [],
     );
@@ -1055,6 +1115,16 @@ class AppLanguage {
     return Intl.message(
       'Họ và tên',
       name: 'full_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thư viện`
+  String get gallery {
+    return Intl.message(
+      'Thư viện',
+      name: 'gallery',
       desc: '',
       args: [],
     );
@@ -1365,6 +1435,16 @@ class AppLanguage {
     return Intl.message(
       'Danh sách videos',
       name: 'list_videos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Địa điểm`
+  String get location {
+    return Intl.message(
+      'Địa điểm',
+      name: 'location',
       desc: '',
       args: [],
     );

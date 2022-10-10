@@ -11,7 +11,7 @@ class HelpContactUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: context.insets.a16,
-      children: [
+      children: <Widget>[
         BaseCard(
           padding: context.insets.a16,
           decoration: BoxDecoration(

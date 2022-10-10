@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "apply": MessageLookupByLibrary.simpleMessage("Apply"),
         "april": MessageLookupByLibrary.simpleMessage("April"),
         "april_s": MessageLookupByLibrary.simpleMessage("Apr"),
+        "audio": MessageLookupByLibrary.simpleMessage("Audio"),
         "august": MessageLookupByLibrary.simpleMessage("August"),
         "august_s": MessageLookupByLibrary.simpleMessage("Aug"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
@@ -62,6 +63,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "begin": MessageLookupByLibrary.simpleMessage("Begin"),
         "biometric_id": MessageLookupByLibrary.simpleMessage("Biometric ID"),
         "birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
+        "calls": MessageLookupByLibrary.simpleMessage("Calls"),
+        "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "can_not_open": MessageLookupByLibrary.simpleMessage("Can not open"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancel_request":
@@ -79,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_password_successfully": MessageLookupByLibrary.simpleMessage(
             "Change password successfully"),
         "change_pin": MessageLookupByLibrary.simpleMessage("Change PIN"),
+        "chats": MessageLookupByLibrary.simpleMessage("Chats"),
         "choose_date": MessageLookupByLibrary.simpleMessage("Choose date"),
         "choose_gender":
             MessageLookupByLibrary.simpleMessage("Please choose gender"),
@@ -109,6 +113,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "connection_lost":
             MessageLookupByLibrary.simpleMessage("No network connection"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
+        "contacts": MessageLookupByLibrary.simpleMessage("Contacts"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Create new account"),
         "create_profile":
@@ -130,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "detail": MessageLookupByLibrary.simpleMessage("Detail"),
         "dismiss": MessageLookupByLibrary.simpleMessage("Dismiss"),
         "do_not_have": MessageLookupByLibrary.simpleMessage("Do not have"),
+        "document": MessageLookupByLibrary.simpleMessage("Document"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
         "dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
@@ -167,6 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Friend referral"),
         "full": MessageLookupByLibrary.simpleMessage("Full"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full name"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
         "gender": MessageLookupByLibrary.simpleMessage("Gender"),
         "general": MessageLookupByLibrary.simpleMessage("General"),
         "general_notification":
@@ -204,6 +211,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "let_go": MessageLookupByLibrary.simpleMessage("Let\'s go"),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
         "list_videos": MessageLookupByLibrary.simpleMessage("List videos"),
+        "location": MessageLookupByLibrary.simpleMessage("Location"),
         "log_in": MessageLookupByLibrary.simpleMessage("Login"),
         "log_out": MessageLookupByLibrary.simpleMessage("Logout"),
         "log_out_confirmation": MessageLookupByLibrary.simpleMessage(

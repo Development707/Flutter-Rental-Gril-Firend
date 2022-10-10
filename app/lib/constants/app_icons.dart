@@ -30,8 +30,9 @@ class AppIcons {
   static const String icCalendarRemoveBold =
       'assets/icons/ic_calendar_remove_bold.svg';
   static const String icCalendarV2 = 'assets/icons/ic_calendar_v2.svg';
-  static const String icCall = 'assets/icons/ic_call.svg';
   static const String icCallCalling = 'assets/icons/ic_call_calling.svg';
+  static const String icCall = 'assets/icons/ic_call.svg';
+  static const String icCamRecord = 'assets/icons/ic_cam_record.svg';
   static const String icCamera = 'assets/icons/ic_camera.svg';
   static const String icCameraBold = 'assets/icons/ic_camera_bold.svg';
   static const String icChart = 'assets/icons/ic_chart.svg';

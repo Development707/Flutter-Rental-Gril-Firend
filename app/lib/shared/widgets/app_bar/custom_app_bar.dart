@@ -7,6 +7,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
     this.onBackClicked,
+    this.centerTitle = true,
     this.title,
     this.actions = const <Widget>[],
     this.titleText,
@@ -14,6 +15,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   final Function()? onBackClicked;
+  final bool centerTitle;
   final Widget? title;
   final String? titleText;
   final List<Widget> actions;
@@ -23,7 +25,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: CustomBackButton(onPressed: onBackClicked),
-      centerTitle: true,
+      centerTitle: centerTitle,
       title: title ??
           Text(titleText ?? '', style: context.typo.titleLarge.weight600),
       actions: actions,

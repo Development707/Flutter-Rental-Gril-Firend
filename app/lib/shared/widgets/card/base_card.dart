@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../common/common.dart';
-import '../selection/app_checkbox.dart';
 
 class BaseCard extends StatelessWidget {
   const BaseCard({
@@ -15,6 +14,7 @@ class BaseCard extends StatelessWidget {
     this.bottom,
     this.height,
     this.padding,
+    this.margin,
     this.borderRadius,
     this.crossAxisAlignment = CrossAxisAlignment.center,
     this.decoration,
@@ -29,6 +29,7 @@ class BaseCard extends StatelessWidget {
   final Widget? bottom;
   final double? height;
   final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
   final BorderRadiusGeometry? borderRadius;
   final CrossAxisAlignment crossAxisAlignment;
   final Decoration? decoration;
@@ -38,6 +39,7 @@ class BaseCard extends StatelessWidget {
     return Container(
       height: height,
       padding: padding ?? context.insets.a12,
+      margin: margin,
       decoration: decoration ??
           BoxDecoration(
             color: context.colorScheme.secondaryContainer,
@@ -55,6 +57,7 @@ class BaseCard extends StatelessWidget {
             ],
           ),
       child: Column(
+        crossAxisAlignment: crossAxisAlignment,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Row(

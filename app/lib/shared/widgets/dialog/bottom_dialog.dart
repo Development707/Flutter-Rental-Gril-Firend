@@ -113,7 +113,7 @@ extension BottomModal on BuildContext {
               margin: context.mediaQueryViewInsets,
               // Provide a background color for the popup.
               decoration: BoxDecoration(
-                color: CupertinoColors.systemBackground.resolveFrom(context),
+                color: colorScheme.background,
                 borderRadius:
                     BorderRadius.vertical(top: Radius.circular(sizes.p16)),
               ),

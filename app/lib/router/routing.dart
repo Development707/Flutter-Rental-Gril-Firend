@@ -121,7 +121,14 @@ class Routing {
 
   static final List<RouteBase> _favoriteRouting = <RouteBase>[];
 
-  static final List<RouteBase> _chatRouting = <RouteBase>[];
+  static final List<RouteBase> _chatRouting = <RouteBase>[
+    GoRoute(
+      path: ChatDetailPage.routerPath,
+      parentNavigatorKey: navigatorKey,
+      pageBuilder: (_, __) =>
+          const CupertinoTransitionPage(child: ChatDetailPage()),
+    ),
+  ];
 
   static final List<RouteBase> _profileRouting = <RouteBase>[
     GoRoute(

@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "apply": MessageLookupByLibrary.simpleMessage("Áp dụng"),
         "april": MessageLookupByLibrary.simpleMessage("Tháng 4"),
         "april_s": MessageLookupByLibrary.simpleMessage("Apr"),
+        "audio": MessageLookupByLibrary.simpleMessage("Âm thanh"),
         "august": MessageLookupByLibrary.simpleMessage("Tháng 8"),
         "august_s": MessageLookupByLibrary.simpleMessage("Aug"),
         "back": MessageLookupByLibrary.simpleMessage("Quay lại"),
@@ -63,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "begin": MessageLookupByLibrary.simpleMessage("Bắt đầu"),
         "biometric_id": MessageLookupByLibrary.simpleMessage("Sinh trắc học"),
         "birthday": MessageLookupByLibrary.simpleMessage("Ngày sinh"),
+        "calls": MessageLookupByLibrary.simpleMessage("Cuộc gọi"),
+        "camera": MessageLookupByLibrary.simpleMessage("Máy ảnh"),
         "can_not_open": MessageLookupByLibrary.simpleMessage("Không mở được"),
         "cancel": MessageLookupByLibrary.simpleMessage("Huỷ"),
         "cancel_request": MessageLookupByLibrary.simpleMessage("Hủy yêu cầu"),
@@ -75,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_password_successfully": MessageLookupByLibrary.simpleMessage(
             "Thay đổi mật khẩu thành công"),
         "change_pin": MessageLookupByLibrary.simpleMessage("Thay đổi pin"),
+        "chats": MessageLookupByLibrary.simpleMessage("Trò chuyện"),
         "choose_date": MessageLookupByLibrary.simpleMessage("Chọn ngày"),
         "choose_gender":
             MessageLookupByLibrary.simpleMessage("Hãy chọn giới tính"),
@@ -104,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "connection_lost":
             MessageLookupByLibrary.simpleMessage("Không có kết nối mạng"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Liên hệ chúng tôi"),
+        "contacts": MessageLookupByLibrary.simpleMessage("Liên lạc"),
         "create_an_account":
             MessageLookupByLibrary.simpleMessage("Tạo tài khoản"),
         "create_profile": MessageLookupByLibrary.simpleMessage("Tạo hồ sơ"),
@@ -123,6 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "detail": MessageLookupByLibrary.simpleMessage("Chi tiết"),
         "dismiss": MessageLookupByLibrary.simpleMessage("Bỏ qua"),
         "do_not_have": MessageLookupByLibrary.simpleMessage("Không có"),
+        "document": MessageLookupByLibrary.simpleMessage("Tài liệu"),
         "done": MessageLookupByLibrary.simpleMessage("Xong"),
         "dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Không có tài khoản?"),
@@ -160,6 +166,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Giới thiệu bạn bè"),
         "full": MessageLookupByLibrary.simpleMessage("Đầy đủ"),
         "full_name": MessageLookupByLibrary.simpleMessage("Họ và tên"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Thư viện"),
         "gender": MessageLookupByLibrary.simpleMessage("Giới tính"),
         "general": MessageLookupByLibrary.simpleMessage("Chung"),
         "general_notification":
@@ -197,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "let_go": MessageLookupByLibrary.simpleMessage("Bắt đầu"),
         "light": MessageLookupByLibrary.simpleMessage("Sáng"),
         "list_videos": MessageLookupByLibrary.simpleMessage("Danh sách videos"),
+        "location": MessageLookupByLibrary.simpleMessage("Địa điểm"),
         "log_in": MessageLookupByLibrary.simpleMessage("Đăng nhập"),
         "log_out": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
         "log_out_confirmation": MessageLookupByLibrary.simpleMessage(

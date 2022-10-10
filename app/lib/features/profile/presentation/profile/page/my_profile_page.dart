@@ -14,7 +14,7 @@ class MyProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titleText: 'Profile'),
+      appBar: CustomAppBar(titleText: context.l10n.profile),
       body: ListView(
         padding: context.insets.a16,
         children: <Widget>[
